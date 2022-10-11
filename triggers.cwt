@@ -876,6 +876,10 @@ alias[trigger:estate_loyalty] = {
 	estate = <estate>
 	higher_than_influence = bool
 }
+alias[trigger:estate_loyalty] = {
+	estate = all
+	higher_than_influence = bool
+}
 
 
 ## scope = country
@@ -1036,6 +1040,20 @@ alias[trigger:had_recent_war] = int
 ###Returns true if the ruler flag X was last set for the current ruler at least Y days ago.
 alias[trigger:had_ruler_flag] = {
 	flag = value[ruler_flag]
+	days = int
+}
+
+## scope = country
+###Returns true if the ruler flag X was last set for the current ruler at least Y days ago.
+alias[trigger:had_ruler_flag] = {
+	flag = value[heir_flag]
+	days = int
+}
+
+## scope = country
+###Returns true if the ruler flag X was last set for the current ruler at least Y days ago.
+alias[trigger:had_ruler_flag] = {
+	flag = value[consort_flag]
 	days = int
 }
 
@@ -1415,8 +1433,8 @@ alias[trigger:has_influencing_fort] = bool
 ###Returns true if the country has the specified institution.
 alias[trigger:has_institution] = <institution>
 
-## scope = country
-###Returns true if the country has the leader "X".
+## scope = { country mercenary_company }
+###Returns true if the country or mercenary company has the leader "X".
 alias[trigger:has_leader] = localisation_synced #value[leader_name]
 
 ## scope = country
@@ -1583,6 +1601,16 @@ alias[trigger:has_ruler] = localisation_synced #value[ruler_name]
 ## severity = warning
 alias[trigger:has_ruler_flag] = value[ruler_flag]
 
+## scope = country
+###Returns true if the ruler flag X is set for the country.
+## severity = warning
+alias[trigger:has_ruler_flag] = value[heir_flag]
+
+## scope = country
+###Returns true if the ruler flag X is set for the country.
+## severity = warning
+alias[trigger:has_ruler_flag] = value[consort_flag]
+
 ## scope = province
 ###Returns true if an army in the province is led by a ruler from X.
 alias[trigger:has_ruler_leader_from] = scope[country]
@@ -1669,10 +1697,11 @@ alias[trigger:has_switched_nation] = bool
 alias[trigger:has_terrain] = <terrain>
 
 ## scope = province
-###Returns true the specified country has the trade modifier X in the trade node.
+###Returns true the specified country has the trade modifier X in the trade node that the scoped province belongs to.
 alias[trigger:has_trade_modifier] = {
-	who = scope[country]
+	who = scope[any]
 	who = enum[country_tags]
+
 	enum[key_name] = localisation #todo: like a variable, set via add_trade_modifier
 }
 
@@ -4534,7 +4563,7 @@ alias[trigger:can_migrate] = bool
 alias[trigger:current_institution] = int[0..100]
 
 ## scope = country
-alias[trigger:government_reform_progress] = int[0..100]
+alias[trigger:government_reform_progress] = int
 
 ## scope = country
 ###Returns true if the current country scope has a religious school.
@@ -4807,6 +4836,7 @@ alias[trigger:num_of_free_explorers] = int
 alias[trigger:has_great_project] = {
 	type = enum[great_project]
 	## cardinality = 0..1
+	###Returns true if this great project is tier X or higher
 	tier = int[0..100]
 }
 
@@ -4815,6 +4845,7 @@ alias[trigger:has_great_project] = {
 alias[trigger:has_great_project] = {
 	type = <great_project>
 	## cardinality = 0..1
+	###Returns true if this great project is tier X or higher
 	tier = int[0..100]
 }
 
@@ -4920,8 +4951,8 @@ alias[trigger:tribal_land_of] = enum[country_tags]
 ###Checks if the country is a migratory tribe
 alias[trigger:tribal_land_of] = none
 
-## scope = country
-###Returns true if the tribal development of the tribe is at least X.
+## scope = { province country }
+###Returns true if the tribal development of the scope tribe is at least X, if used in the province scope it returns true if the tribal development of the province is at least X.
 alias[trigger:tribal_development] = int
 
 ## scope = country
@@ -5050,20 +5081,32 @@ alias[trigger:has_cultural_union] = bool
 alias[trigger:num_of_cawa] = int
 
 ## scope = country
+### Returns true if country scope has at least x marines.
+alias[trigger:num_of_marines] = int
+
+## scope = country
 ### Returns true if country scope has at least x cawa troops
 alias[trigger:current_war_losses] = {
 	## cardinality = 0..1
-	who_with = <Tag>
+	who_with = scope[country]
+	## cardinality = 0..1
+	who_with = enum[country_tags]
 	## cardinality = 0..1
 	type = enum[unit_types]
 	## cardinality = 0..1
+	###This, as of 1.34.3.0, doesn't work, use 'soldiers' instead
 	type = men
+	## cardinality = 0..1
+	###Land Units
+	type = soldiers
 	## cardinality = 0..1
 	type = ships
 	## cardinality = 0..1
 	type = all
 	## cardinality = 0..1
-	cause = attrition/battle/capture
+	cause = attrition
+	cause = battle
+	cause = capture
 	## cardinality = 0..1
 	amount = int
 }
@@ -5181,11 +5224,20 @@ alias[trigger:government] = enum[country_tags]
 alias[trigger:has_estate_privilege] = <estate_privilege>
 
 ## scope = country
-###Returns the % of the country's development that is held by the Crown Land.
+###Returns true if the percentage of the country's development that is held by the Crown Land is at least X.
 alias[trigger:crown_land_share] = int[1..100]
+
 ## scope = country
-###Returns the % of the country's development that is held by the Crown Land.
+###Returns true if the percentage of the country's development that is held by the Crown Land is at least X.
 alias[trigger:crown_land_share] = 0.1
+
+## scope = country
+###Returns true if the percentage of the country's development that is held by the Crown Land is at least X.
+alias[trigger:crown_land_share] = <estate>
+
+## scope = country
+###Returns true if the percentage of the country's development that is held by the Crown Land is at least X.
+alias[trigger:crown_land_share] = all
 
 ## scope = country
 ###Returns if the country has been force converted by a specified other country.
@@ -5381,3 +5433,90 @@ alias[trigger:uses_horde_unity] = bool
 ## scope = country
 ###Checks if country uses republican tradition
 alias[trigger:uses_republican_tradition] = bool
+
+## scope = country
+###Returns true if the scoped country gives Fleet Basing Rights to the specified country scope
+alias[trigger:gives_fleet_basing_rights_to] = scope[country]
+
+## scope = country
+###Returns true if the scoped country gives Fleet Basing Rights to the specified country scope
+alias[trigger:gives_fleet_basing_rights_to] = enum[country_tags]
+
+## scope = country
+###Returns true if the scoped country gives Military Access to the specified country scope
+alias[trigger:gives_military_access_to] = scope[country]
+
+## scope = country
+###Returns true if the scoped country gives Military Access to the specified country scope
+alias[trigger:gives_military_access_to] = enum[country_tags]
+
+## scope = province
+###Returns true if the province is blockaded by the specfied country. Currently only works with country TAGs, not scopes.
+alias[trigger:is_blockaded_by] = enum[country_tags]
+
+## scope = province
+###Returns true if the province is a (permanent) claim of any country which is not the owner of the province
+alias[trigger:is_foreign_claim] = bool
+
+## scope = country
+###Returns true if scope is hegemon of <type> or all
+alias[trigger:is_hegemon_of_type] = <hegemon>
+
+## scope = country
+###Returns true if scope is hegemon of <type> or all
+alias[trigger:is_hegemon_of_type] = all
+
+## scope = country
+###Returns true if the scope currently has at least X Caroleans
+alias[trigger:num_of_carolean] = int
+
+## scope = country
+###Returns true if the scope currently has at least X Hussars
+alias[trigger:num_of_hussars] = int
+
+## scope = country
+###Returns true if the scope currently owes at least X favors to the specified country
+alias[trigger:owes_favors] = {
+	who = scope[country]
+	who = enum[country_tags]
+	value = int	
+}
+
+## scope = country
+###Returns true if the scope currently receives Fleet Basing Rights from the specified country
+alias[trigger:receives_fleet_basing_rights_from] = scope[country]
+
+## scope = country
+###Returns true if the scope currently receives Fleet Basing Rights from the specified country
+alias[trigger:receives_fleet_basing_rights_from] = enum[country_tags]
+
+## scope = country
+###Returns true if the scope currently receives Military Access from the specified country
+alias[trigger:receives_military_access_from] = scope[country]
+
+## scope = country
+###Returns true if the scope currently receives Military Access from the specified country
+alias[trigger:receives_military_access_from] = enum[country_tags]
+
+## scope = country
+alias[trigger:has_unlocked_government_reform] = <government_reform.new>
+
+## scope = country
+alias[trigger:has_unlocked_government_reform_tooltip] = <government_reform.new>
+
+###DO NOT USE THIS. This key is used by Paradox Internally to test things but it has made into the released files of 1.34, so we are adding it here to avoid confusing errors.
+## cardinality = 0..1
+alias[trigger:nationalism_debug] = int
+
+## scope = { province trade_node }
+###Returns true if country has at least X trade power in a trade node via privateering actions.
+alias[trigger:has_privateer_share_in_trade_node] = {
+	who = scope[country]
+	who = enum[country_tags]
+	# It uses a percentage, 0->0%, 1->100%
+	share = float[0..1]
+}
+
+## scope = { province trade_node }
+###Returns true if the trade node has a value of at least X
+alias[trigger:trade_node_value] = int

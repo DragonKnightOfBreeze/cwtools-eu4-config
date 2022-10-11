@@ -5,6 +5,8 @@ types = {
 		localisation = {
 			## required
 			name = "$"
+			## optional
+			desc = "$_desc"
 		}
 	}
 }
@@ -97,13 +99,34 @@ great_project = {
 		area_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
+		# This one seems to be optional, it is not present
+		# in any monument, including the ones from 1.34
+		## cardinality = 0..1
+		## replace_scope = { root = province this = province }
+		region_modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
 		## replace_scope = { root = country this = country }
+		## cardinality = 0..1
 		country_modifiers = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## replace_scope = { root = province this = province }
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
+		}
+		## cardinality = 0..inf
+		###Modifier that are applied if the specified conditions are true.
+		conditional_modifier = {
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+			}
+			## cardinality = 0..1
+			###Specifies whether the tooltip should list it as positive or not
+			is_bad = bool
 		}
 	}
 	tier_1 = {
@@ -121,6 +144,13 @@ great_project = {
 		area_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
+		# This one seems to be optional, it is not present
+		# in any monument, including the ones from 1.34
+		## cardinality = 0..1
+		## replace_scope = { root = province this = province }
+		region_modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
 		## replace_scope = { root = country this = country }
 		country_modifiers = {
 			alias_name[modifier] = alias_match_left[modifier]
@@ -128,6 +158,19 @@ great_project = {
 		## replace_scope = { root = province this = province }
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
+		}
+		## cardinality = 0..inf
+		###Modifier that are applied if the specified conditions are true.
+		conditional_modifier = {
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+			}
+			## cardinality = 0..1
+			###Specifies whether the tooltip should list it as positive or not
+			is_bad = bool
 		}
 	}
 	tier_2 = {
@@ -145,6 +188,13 @@ great_project = {
 		area_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
+		# This one seems to be optional, it is not present
+		# in any monument, including the ones from 1.34
+		## cardinality = 0..1
+		## replace_scope = { root = province this = province }
+		region_modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
 		## replace_scope = { root = country this = country }
 		country_modifiers = {
 			alias_name[modifier] = alias_match_left[modifier]
@@ -152,6 +202,19 @@ great_project = {
 		## replace_scope = { root = province this = province }
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
+		}
+		## cardinality = 0..inf
+		###Modifier that are applied if the specified conditions are true.
+		conditional_modifier = {
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+			}
+			## cardinality = 0..1
+			###Specifies whether the tooltip should list it as positive or not
+			is_bad = bool
 		}
 	}
 	tier_3 = {
@@ -169,6 +232,13 @@ great_project = {
 		area_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
+		# This one seems to be optional, it is not present
+		# in any monument, including the ones from 1.34
+		## cardinality = 0..1
+		## replace_scope = { root = province this = province }
+		region_modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
 		## replace_scope = { root = country this = country }
 		country_modifiers = {
 			alias_name[modifier] = alias_match_left[modifier]
@@ -176,6 +246,19 @@ great_project = {
 		## replace_scope = { root = province this = province }
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
+		}
+		## cardinality = 0..inf
+		###Modifier that are applied if the specified conditions are true.
+		conditional_modifier = {
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			modifier = {
+				alias_name[modifier] = alias_match_left[modifier]
+			}
+			## cardinality = 0..1
+			###Specifies whether the tooltip should list it as positive or not
+			is_bad = bool
 		}
 	}
 }

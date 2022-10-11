@@ -38,6 +38,10 @@ mission_series = {
 	potential_on_load = {
 		## cardinality = 0..inf
 		has_dlc = enum[DLCs]
+		## cardinality = 0..inf
+		NOT = {
+			has_dlc = enum[DLCs]
+		}
 	}
 
 	## replace_scope = { this = country root = country }
@@ -84,13 +88,6 @@ mission_series = {
 		## cardinality = 0..1
 		## replace_scope = { this = country root = country }
 		ai_weight = {
-			factor = float
-			alias_name[modifier_rule] = alias_match_left[modifier_rule]
-		}
-
-		## cardinality = 0..1
-		## replace_scope = { this = country root = country }
-		ai_priority = {
 			factor = float
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
