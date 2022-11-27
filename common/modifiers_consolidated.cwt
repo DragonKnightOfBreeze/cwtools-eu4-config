@@ -52,8 +52,6 @@ types = {
 
 event_modifier = {
 	alias_name[modifier] = alias_match_left[modifier]
-	## cardinality = 0..1
-	is_mercenary_modifier = yes
 
 	## cardinality = 0..1
 	religion = yes
@@ -122,6 +120,10 @@ province_triggered_modifier = {
 	on_deactivation = {
 		alias_name[effect] = alias_match_left[effect]
 	}
+
+	## cardinality = 0..1
+	###Province modifier will be hidden from view even while active
+	hidden = yes
 }
 
 timed_modifier = {

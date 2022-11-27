@@ -803,7 +803,7 @@ alias[effect:add_yearly_sailors] = float[-10.0..20.0] #I am assuming no one want
 ## scope = country
 ###Generates an new admiral for the current scope. The number is the amount of navy tradition to use in generation.
 alias[effect:create_admiral] = {
-	tradition = int
+	tradition = int[0..100]
 	## cardinality = 0..1
 	###Added to randomly generated value
 	add_fire = int
@@ -841,7 +841,7 @@ alias[effect:create_admiral] = {
 ## scope = country
 ###Generates an new explorer for the current scope. The number is the amount of navy tradition to use in generation.
 alias[effect:create_explorer] = {
-	tradition = int
+	tradition = int[0..100]
 	## cardinality = 0..1
 	###Added to randomly generated value
 	add_fire = int
@@ -881,7 +881,7 @@ alias[effect:create_explorer] = {
 ## scope = country
 ###Generates an new conquistador for the current scope. The number is the amount of army tradition to use in generation.
 alias[effect:create_conquistador] = {
-	tradition = int
+	tradition = int[0..100]
 	## cardinality = 0..1
 	###Added to randomly generated value
 	add_fire = int
@@ -919,7 +919,8 @@ alias[effect:create_conquistador] = {
 ## scope = country
 ###Generates an new general for the current scope.
 alias[effect:create_general] = {
-	tradition = int
+	###Maximum of 100, values above are considered 100
+	tradition = int[0..100]
 	## cardinality = 0..1
 	###Added to randomly generated value
 	add_fire = int
@@ -1360,16 +1361,9 @@ alias[effect:vassalize] = enum[country_tags]
 ###Makes the defined scope into the defined subject type under the current scope. Subject types are found in /Europa Universalis IV/common/subject_types/*.txt.
 alias[effect:create_subject] = {
 	subject_type = <subject_type>
-	subject = scope[country]
-	subject = enum[country_tags]
-}
-
-## scope = country
-###Makes the defined scope into the defined subject type under the current scope. Subject types are found in /Europa Universalis IV/common/subject_types/*.txt.
-alias[effect:create_subject] = {
-	subject_type = <subject_type>
-	who = scope[country]
-	who = enum[country_tags]
+	## cardinality = 1..1
+	enum[who_or_subject] = scope[country]
+	enum[who_or_subject] = enum[country_tags]
 }
 
 ## scope = country
@@ -1574,6 +1568,7 @@ alias[effect:add_estate_loyalty] = {
 ###Adds a loyalty modifier for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
 alias[effect:add_estate_loyalty_modifier] = {
 	estate = <estate>
+	estate = all
 	desc = localisation
 	loyalty = int
 	duration = int
@@ -1701,7 +1696,12 @@ alias[effect:set_ruler_religion] = <province_id>
 
 ## scope = country
 ###Removes the current ruler of the current scope, saving them to the unique string.
-alias[effect:exile_ruler_as] = value_set[exiled_ruler]
+alias[effect:exile_ruler_as] = {
+	## cardinality = 1..1
+	name = value_set[exiled_ruler]
+	## cardinality = 0..1
+	kill_monarch = bool
+}
 
 ## scope = country
 ###Makes an exiled ruler the ruler of the current scope.
@@ -2505,11 +2505,15 @@ alias[effect:add_building] = <building>
 alias[effect:remove_building] = <building>
 
 ## scope = province
-###Starts building construction in the current province scope. cost and speed are a percentage of the base value, i.e. 0.5 is 50% of the base value.
+###Starts building construction in the current province scope.
 alias[effect:add_building_construction] = {
 	building = <building>
-	speed = float
-	cost = float
+	## cardinality = 0..1
+	###Percentage of the base time to build, i.e 0.5 means built twice as fast
+	speed = float[0..inf]
+	## cardinality = 0..1
+	###Percentage of the base cost to build, i.e 0.5 means 50% of the cost
+	cost = float[0..inf]
 }
 
 ## scope = province
@@ -2546,7 +2550,12 @@ alias[effect:change_culture] = scope[province]
 
 ## scope = province
 ###Starts culture conversion in the current province scope, for the current owner.
-alias[effect:add_culture_construction] = yes
+alias[effect:add_culture_construction] = {
+	###Percentage of the base cost of converting, uses ADM mana instead of DIP.
+	cost = float[0..1]
+	###Percentage of the base time of converting, 0.5 means half the base time of converting.
+	speed = float[0..1]
+}
 
 ## scope = { country province }
 ###Changes the religion in the current province scope to the syncretic religion of its owner.
@@ -3205,6 +3214,8 @@ alias[effect:adopt_reform_progress] = enum[country_tags]
 
 ## scope = province
 alias[effect:create_flagship] = {
+	## cardinality = 0..1
+	###Name of the flagship, defaults to a random culture one
 	name = scalar
 	type = enum[naval_unit_types]
 }
@@ -3268,9 +3279,6 @@ alias[effect:force_remove_rival] = enum[country_tags]
 ## scope = country
 ### Turns the monarch into a leader
 alias[effect:use_monarch_as_leader] = yes
-
-## scope = emperor
-alias[effect:set_impirial_incident] = <impirial_incident>
 
 ## scope = country
 #There is also restore_country_name not sure what the difference is
@@ -3732,7 +3740,11 @@ alias[effect:extend_golden_age] = int[1..inf]
 
 ## scope = { country province }
 ###Makes specified country bankrupt
-alias[effect:set_bankrupt] = enum[country_tags]
+alias[effect:set_bankruptcy] = enum[country_tags]
+
+## scope = { country province }
+###Makes specified country bankrupt
+alias[effect:set_bankruptcy] = scope[country]
 
 ## scope = province
 alias[effect:carolean_infantry] = scope[country]
@@ -3770,7 +3782,7 @@ alias[effect:reverse_add_aggressive_expansion] = {
 	apply_calc = bool
 }
 
-## scope = country
+## scope = any
 ###Destroys a great project, setting it to tier 0
 alias[effect:destroy_great_project] = {
 	type = <great_project>
@@ -3779,3 +3791,12 @@ alias[effect:destroy_great_project] = {
 ## scope = country
 ###Updates the unit sprites for the scoped country
 alias[effect:update_sprite_pack] = yes
+
+## scope = country
+###Changes the National Focus, or none to disable it
+alias[effect:change_national_focus] = enum[power_categories]
+alias[effect:change_national_focus] = none
+
+## scope = country
+###Generates an agenda for the specified estate, which can then be started with start_estate_agenda = <estate>
+alias[effect:generate_estate_agenda] = <estate>

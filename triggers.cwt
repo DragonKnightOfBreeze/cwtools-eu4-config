@@ -41,7 +41,7 @@ alias[trigger:<trade_good>] = int
 
 ## scope = country
 ###Returns true if the country has at least X absolutism.
-alias[trigger:absolutism] = int[0..100]
+alias[trigger:absolutism] = int
 
 ## scope = country
 ###Returns true if the country has at least X absolutism.
@@ -64,8 +64,16 @@ alias[trigger:accepted_culture] = scope[province]
 alias[trigger:active_major_mission] = <mission> #todo
 
 ## scope = country
-###Returns true if the country has a ruler with an administrative skill of at least X.
-alias[trigger:adm] = int[0..6]
+###Returns true if the ountry has a ruler with administrative skill of at least X, or at least as high military skill as the ruler of the specified country.
+alias[trigger:adm] = int
+
+## scope = country
+###Returns true if the ountry has a ruler with administrative skill of at least X, or at least as high military skill as the ruler of the specified country.
+alias[trigger:adm] = scope[country]
+
+## scope = country
+###Returns true if the ountry has a ruler with administrative skill of at least X, or at least as high military skill as the ruler of the specified country.
+alias[trigger:adm] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country has at least X administrative power, or at least as much as the specified country.
@@ -244,7 +252,7 @@ alias[trigger:average_home_autonomy] = int[0..100]
 
 ## scope = country
 ###Returns true if the country has an average unrest in its provinces of at least X.
-alias[trigger:average_unrest] = int[0..100]
+alias[trigger:average_unrest] = int
 
 ## scope = province
 ###Returns true if the base manpower of the province is at least X.
@@ -646,8 +654,8 @@ alias[trigger:defensive_war_with] = scope[any]
 alias[trigger:defensive_war_with] = enum[country_tags]
 
 ## scope = province
-###Returns true if the devastation of the province is at least X.
-alias[trigger:devastation] = int
+###Returns true if the devastation of the province is at least X. decimal values can be used but the tooltip will round to the nearest whole number.
+alias[trigger:devastation] = float
 
 ## scope = province
 ###Returns true if the development of the province is at least X, or at least as much as the specified province scope.
@@ -678,8 +686,16 @@ alias[trigger:devotion] = scope[country]
 alias[trigger:devotion] = enum[country_tags]
 
 ## scope = country
-###Returns true if the country has a ruler with a diplomatic skill of at least X.
-alias[trigger:dip] = int[0..6]
+###Returns true if the ountry has a ruler with diplomatic skill of at least X, or at least as high military skill as the ruler of the specified country.
+alias[trigger:dip] = int
+
+## scope = country
+###Returns true if the ountry has a ruler with diplomatic skill of at least X, or at least as high military skill as the ruler of the specified country.
+alias[trigger:dip] = scope[country]
+
+## scope = country
+###Returns true if the ountry has a ruler with diplomatic skill of at least X, or at least as high military skill as the ruler of the specified country.
+alias[trigger:dip] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country has a diplomatic reputation of at least X, or at least as much diplomatic reputation as the specified country.
@@ -981,6 +997,14 @@ alias[trigger:grown_by_development] = int
 alias[trigger:great_power_rank] = int
 
 ## scope = country
+###Returns true if the country has a great power rank of X or worse (i.e. great_power_rank will check if your rank is 2, 3 or anything except 1, including not in the top 8, i.e. use this trigger with NOT)
+alias[trigger:great_power_rank] = scope[country]
+
+## scope = country
+###Returns true if the country has a great power rank of X or worse (i.e. great_power_rank will check if your rank is 2, 3 or anything except 1, including not in the top 8, i.e. use this trigger with NOT)
+alias[trigger:great_power_rank] = enum[country_tags]
+
+## scope = country
 ###Returns true if the country is guaranteed by X.
 alias[trigger:guaranteed_by] = scope[country]
 
@@ -1263,7 +1287,7 @@ alias[trigger:has_embargo_rivals] = bool
 ###Returns true if an adjacent province is uncolonized. Warning: Works only with 'yes'.
 alias[trigger:has_empty_adjacent_province] = yes
 
-## scope = country
+## scope = { country province }
 ###Returns true if the country has estate X, or in province scope if the province is controlled by an estate (yes/no), or is controlled by estate X.
 alias[trigger:has_estate] = <estate>
 
@@ -1334,10 +1358,6 @@ alias[trigger:has_given_consort_to] = scope[country]
 ## scope = country
 ###Returns true if the scoped country has given a consort to the specified country.
 alias[trigger:has_given_consort_to] = enum[country_tags]
-
-## scope = province
-###Returns true if the country has the specified great project.
-alias[trigger:has_great_project] = <great_project>
 
 ## scope = country
 ###Returns true if the country has guaranteed country X.
@@ -2274,6 +2294,8 @@ alias[trigger:is_in_war] = {
 	casus_belli = <casus_belli>
 
 	## cardinality = 0..1
+	## severity = warning
+	###Using negative war_score is currently bugged, it will always return false
 	war_score = int[0..100]
 
 	## cardinality = 0..1
@@ -2765,15 +2787,15 @@ alias[trigger:mercantilism] = float
 alias[trigger:meritocracy] = int
 
 ## scope = country
-###Returns true if cthe ountry has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
+###Returns true if the ountry has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:mil] = int
 
 ## scope = country
-###Returns true if cthe ountry has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
+###Returns true if the ountry has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:mil] = scope[country]
 
 ## scope = country
-###Returns true if cthe ountry has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
+###Returns true if the ountry has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:mil] = enum[country_tags]
 
 ## scope = country
@@ -2806,7 +2828,7 @@ alias[trigger:mil_tech] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country has a monthly income of at least X, or at least as high as the specified country.
-alias[trigger:monthly_income] = int
+alias[trigger:monthly_income] = float
 
 ## scope = country
 ###Returns true if the country has a monthly income of at least X, or at least as high as the specified country.
@@ -4165,12 +4187,6 @@ alias[trigger:trading_part] = {
 ###Returns true if the country has the specified trading policy in the specified trade node. Can also use "policy = any".
 alias[trigger:trading_policy_in_node] = {
 	node = scope[trade_node]
-	policy = <trading_policy>
-	policy = any
-}
-## scope = country
-###Returns true if the country has the specified trading policy in the specified trade node. Can also use "policy = any".
-alias[trigger:trading_policy_in_node] = {
 	node = scope[province]
 	policy = <trading_policy>
 	policy = any
@@ -4406,10 +4422,6 @@ alias[trigger:was_never_end_game_tag_trigger] = bool
 alias[trigger:was_player] = bool
 
 ## scope = country
-###Returns true if the member of the HRE is backing the next imperial reform.
-alias[trigger:will_back_next_reform] = bool
-
-## scope = country
 ###Returns true if the country has a yearly corruption increase of at least X.
 alias[trigger:yearly_corruption_increase] = float
 
@@ -4427,6 +4439,9 @@ alias[trigger:years_in_vassalage_under] = {
 	who = scope[country]
 	who = enum[country_tags]
 	years = int
+	## cardinality = 0..1
+	###Do not limit by subject type
+	all_subject_country = yes
 }
 
 ## scope = country
@@ -4832,18 +4847,11 @@ alias[trigger:current_guru_is] = enum[sikh_guru]
 alias[trigger:num_of_free_explorers] = int
 
 ## scope = province
-###Checks if province has a great project
+###Checks if province has the specified great project or any great project if any is used
 alias[trigger:has_great_project] = {
 	type = enum[great_project]
-	## cardinality = 0..1
-	###Returns true if this great project is tier X or higher
-	tier = int[0..100]
-}
-
-## scope = province
-###Checks if province has a great project
-alias[trigger:has_great_project] = {
 	type = <great_project>
+	type = any
 	## cardinality = 0..1
 	###Returns true if this great project is tier X or higher
 	tier = int[0..100]
@@ -5451,8 +5459,12 @@ alias[trigger:gives_military_access_to] = scope[country]
 alias[trigger:gives_military_access_to] = enum[country_tags]
 
 ## scope = province
-###Returns true if the province is blockaded by the specfied country. Currently only works with country TAGs, not scopes.
+###Returns true if the province is blockaded by the specfied country.
 alias[trigger:is_blockaded_by] = enum[country_tags]
+
+## scope = province
+###Returns true if the province is blockaded by the specfied country.
+alias[trigger:is_blockaded_by] = scope[country]
 
 ## scope = province
 ###Returns true if the province is a (permanent) claim of any country which is not the owner of the province
@@ -5520,3 +5532,7 @@ alias[trigger:has_privateer_share_in_trade_node] = {
 ## scope = { province trade_node }
 ###Returns true if the trade node has a value of at least X
 alias[trigger:trade_node_value] = int
+
+## scope = country
+###Returns whether the country has been forced to change religion
+alias[trigger:religion_enforced] = bool

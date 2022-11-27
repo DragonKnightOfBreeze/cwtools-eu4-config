@@ -70,4 +70,5 @@ localisation_commands = {
 	GetParliamentWithGrammer = country
 	Leader = unit
 	Location = unit
+	enum[defined_text_commands] = any
 }
