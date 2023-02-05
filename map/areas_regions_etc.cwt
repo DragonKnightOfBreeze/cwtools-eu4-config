@@ -72,7 +72,7 @@ types = {
 	type[province_group] = {
 		path = "game/map"
 		path_file = "provincegroup.txt"
-		
+
 		subtype[used] = {
 			## cardinality = 1..inf
 			scalar
@@ -89,7 +89,7 @@ types = {
 province_id = {
 	position = {
 		## cardinality = 14..14
-		float 
+		float
 	}
 	rotation = {
 		## cardinality = 7..7
@@ -106,6 +106,7 @@ area = {
 	## cardinality = 0..inf
 	<province_id>
 
+	## color_type = rgb
 	## cardinality = 0..1
 	color = {
 		## cardinality = 3..3
@@ -121,7 +122,7 @@ continent = {
 mapclimate = {
 	## cardinality = 1..1
 	equator_y_on_province_image = <province_id>
-	
+
 	## cardinality = 10..10
 	<climate> = {
 		## cardinality = 0..inf
@@ -136,7 +137,7 @@ region = {
 		<area.used>
 	}
 
-	## cardinality = 0..inf	
+	## cardinality = 0..inf
 	monsoon = {
 		## cardinality = 2..2
 		scalar #no idea what the numbers are (00.00.00)

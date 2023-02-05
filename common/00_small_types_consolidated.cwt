@@ -231,6 +231,7 @@ insult = {
 
 natives = {
 	graphical_culture = enum[graphical_cultures]
+	## color_type = rgb
 	color = {
 		## cardinality = 3..3
 		int[0..255]
@@ -350,9 +351,10 @@ edict = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 
+	## color_type = rgb
 	color = {
 		## cardinality = 3..3
-		int[0..255
+		int[0..255]
 	}
 
 	## replace_scope = { root = province this = province }
@@ -416,6 +418,7 @@ bookmark = {
 }
 
 dynasty_colors = {
+	## color_type = rgb
 	## cardinality = 1..inf
 	color = {
 		## cardinality = 3..3
@@ -424,6 +427,7 @@ dynasty_colors = {
 }
 
 region_colors = {
+	## color_type = rgb
 	## cardinality = 1..inf
 	color = {
 		## cardinality = 3..3

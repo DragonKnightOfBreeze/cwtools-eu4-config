@@ -3,7 +3,7 @@
 types = {
 	type[trade_good] = {
 		path = "game/common/tradegoods"
-		
+
 		localisation = {
 			## required
 			name = "$"
@@ -17,7 +17,7 @@ types = {
 	}
 	type[trade_company] = {
 		path = "game/common/trade_companies"
-		
+
 		localisation = {
 			## required
 			name = "$"
@@ -25,7 +25,7 @@ types = {
 	}
 	type[trade_company_investment] = {
 		path = "game/common/tradecompany_investments"
-		
+
 		localisation = {
 			## required
 			name = "$"
@@ -35,7 +35,7 @@ types = {
 	}
 	type[trade_node_name] = {
 		path = "game/common/tradenodes"
-		
+
 		localisation = {
 			## required
 			name = "$"
@@ -62,7 +62,7 @@ types = {
 	}
 	type[trade_center] = {
 		path = "game/common/centers_of_trade"
-		
+
 		localisation = {
 			## required
 			name = "$"
@@ -74,14 +74,15 @@ types = {
 
 
 trade_good = {
+	## color_type = hsv
 	color = {
 		## cardinality = 3..3
 		float[0.0..1.0]
 	}
-	
+
 	## cardinality = 0..1
 	is_valuable = yes
-	
+
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
 	modifier = {
@@ -98,12 +99,12 @@ trade_good = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
-	
+
 	subtype[latent] = {
 		is_latent = yes
 		###"Kind of on average how many provinces we want to spawn with it."
 		rnw_latent_chance = int
-		
+
 		## replace_scope = { this = province root = province }
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
@@ -114,16 +115,17 @@ trade_good = {
 
 
 trade_company = {
+	## color_type = rgb
 	color = {
 		## cardinality = 3..3
-		int[0..255
+		int[0..255]
 	}
-	
+
 	provinces = {
 		## cardinality = 1..inf
 		<province_id>
 	}
-	
+
 	## cardinality = 1..inf
 	names = {
 		## cardinality = 0..1
@@ -141,18 +143,18 @@ trade_company_investment = {
 	category = enum[trade_company_investment_types] #todo: verify how these are defined. Could conceivably be scalar
 
 	sprite = <sprite>
-	
+
 	## cardinality = 0..1
 	upgrades_to = <trade_company_investment>
-	
+
 	cost = float
-	
+
 	## cardinality = 0..1
 	## replace_scope = { this = province root = province }
 	allow = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## cardinality = 0..1
 	owner_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
@@ -167,7 +169,7 @@ trade_company_investment = {
 	owner_company_region_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
-	
+
 	## cardinality = 0..1
 	company_region_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
@@ -177,7 +179,7 @@ trade_company_investment = {
 	area_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
-	
+
 	ai_global_worth = { factor = float }
 	ai_area_worth = { factor = float }
 	ai_region_worth = { factor = float }
@@ -197,6 +199,7 @@ enums = {
 
 trade_node = {
 	location = <province_id>
+	## color_type = rgb
 	## cardinality = 0..1
 	color = {
 		## cardinality = 3..3
@@ -244,20 +247,20 @@ trading_policy = {
 	can_maintain = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## cardinality = 0..1
 	## replace_scope = { this = trade_node root = trade_node }
 	node_province_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
-	
+
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
 	###Also applied versus countries with the node as their home node
 	countries_with_merchant_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
-	
+
 	## cardinality = 0..1
 	trade_power = {
 		###-1 = limitless
@@ -265,13 +268,13 @@ trading_policy = {
 		power_modifier = float
 		key = localisation
 	}
-	
+
 	## cardinality = 0..1
 	center_of_reformation = bool
 
 	## cardinality = 0..1
 	show_alert = yes
-	
+
 	button_gfx = <sprite>
 }
 

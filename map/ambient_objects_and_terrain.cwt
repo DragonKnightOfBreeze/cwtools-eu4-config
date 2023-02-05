@@ -76,7 +76,8 @@ terrain = {
 	is_water = yes
 	## cardinality = 0..1
 	inland_sea = yes
-	
+
+	## color_type = rgb
 	## cardinality = 0..1
 	color = {
 		## cardinality = 3..3
@@ -100,7 +101,7 @@ terrain = {
 	allowed_num_of_buildings = int
 	## cardinality = 0..1
 	local_defensiveness = float
-	
+
 	## cardinality = 0..1
 	terrain_override = {
 		## cardinality = 0..inf
@@ -110,16 +111,19 @@ terrain = {
 
 graphical_terrain = {
 	type = <terrain>
+	## color_type = rgb
 	color = {
-		int
+		## cardinality = 3..4
+		int[0..255]
 	}
 }
 
 tree_terrain = {
 	terrain = <terrain>
+	## color_type = rgb
 	color = {
-		## cardinality = 1..inf
-		int
+		## cardinality = 3..4
+		int[0..255]
 	}
 }
 

@@ -197,18 +197,20 @@ religion_group = {
 		}
 
 		icon = int
+		## color_type = rgb
 		color = {
 			## cardinality = 3..3
 			int[0..255]
 		}
+		## color_type = hsv
 		color = {
 			## cardinality = 3..3
 			float[0.0..1.0]
 		}
-		
+
 		## cardinality = 0..1
 		allow_female_defenders_of_the_faith = yes
-				
+
 		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
 		country = {
@@ -355,104 +357,104 @@ religion_group = {
 			papal_tag = enum[country_tags]
 			election_cost = int
 			seat_of_papacy = <province_id>
-			
+
 			## cardinality = 0..1
 			harsh = {
 				alias_name[modifier] = alias_match_left[modifier]
 			}
-			
+
 			## cardinality = 0..1
 			neutral = {
 				alias_name[modifier] = alias_match_left[modifier]
 			}
-			
+
 			## cardinality = 0..1
 			concilatory = {
 				alias_name[modifier] = alias_match_left[modifier]
 			}
-			
+
 			## cardinality = 0..1
 			concessions = {
 				## cardinality = 0..1
 				first_concession = {
-					
+
 					## cardinality = 0..1
 					harsh = {
 						alias_name[modifier] = alias_match_left[modifier]
 					}
-					
+
 					## cardinality = 0..1
 					concilatory = {
 						alias_name[modifier] = alias_match_left[modifier]
 					}
 				}
-			
+
 				## cardinality = 0..1
 				second_concession = {
-					
+
 					## cardinality = 0..1
 					harsh = {
 						alias_name[modifier] = alias_match_left[modifier]
 					}
-					
+
 					## cardinality = 0..1
 					concilatory = {
 						alias_name[modifier] = alias_match_left[modifier]
 					}
 				}
-				
+
 				## cardinality = 0..1
 				third_concession = {
-					
+
 					## cardinality = 0..1
 					harsh = {
 						alias_name[modifier] = alias_match_left[modifier]
 					}
-					
+
 					## cardinality = 0..1
 					concilatory = {
 						alias_name[modifier] = alias_match_left[modifier]
 					}
 				}
-				
+
 				## cardinality = 0..1
 				fourth_concession = {
-					
+
 					## cardinality = 0..1
 					harsh = {
 						alias_name[modifier] = alias_match_left[modifier]
 					}
-					
+
 					## cardinality = 0..1
 					concilatory = {
 						alias_name[modifier] = alias_match_left[modifier]
 					}
 				}
 			}
-			
+
 			## cardinality = 0..1
 			levy_church_tax = {
 				## cardinality = 0..1
 				cost = int
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    potential = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    allow = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    effect = {
 				   alias_name[effect] = alias_match_left[effect]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 				ai_will_do = {
@@ -460,30 +462,30 @@ religion_group = {
 					alias_name[modifier_rule] = alias_match_left[modifier_rule]
 				}
 			}
-			
+
 			## cardinality = 0..1
 			bless_monarch = {
 				## cardinality = 0..1
 				cost = int
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    potential = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    allow = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    effect = {
 				   alias_name[effect] = alias_match_left[effect]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 				ai_will_do = {
@@ -491,30 +493,30 @@ religion_group = {
 					alias_name[modifier_rule] = alias_match_left[modifier_rule]
 				}
 			}
-			
+
 			## cardinality = 0..1
 			indulgence_for_sins = {
 				## cardinality = 0..1
 				cost = int
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    potential = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    allow = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    effect = {
 				   alias_name[effect] = alias_match_left[effect]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 				ai_will_do = {
@@ -522,30 +524,30 @@ religion_group = {
 					alias_name[modifier_rule] = alias_match_left[modifier_rule]
 				}
 			}
-			
+
 			## cardinality = 0..1
 			local_saint = {
 				## cardinality = 0..1
 				cost = int
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    potential = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    allow = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    effect = {
 				   alias_name[effect] = alias_match_left[effect]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 				ai_will_do = {
@@ -553,30 +555,30 @@ religion_group = {
 					alias_name[modifier_rule] = alias_match_left[modifier_rule]
 				}
 			}
-			
+
 			## cardinality = 0..1
 			forgiveness_for_usury = {
 				## cardinality = 0..1
 				cost = int
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    potential = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    allow = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    effect = {
 				   alias_name[effect] = alias_match_left[effect]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 				ai_will_do = {
@@ -584,30 +586,30 @@ religion_group = {
 					alias_name[modifier_rule] = alias_match_left[modifier_rule]
 				}
 			}
-			
+
 			## cardinality = 0..1
 			proclaim_holy_war = {
 				## cardinality = 0..1
 				cost = int
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    potential = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    allow = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    effect = {
 				   alias_name[effect] = alias_match_left[effect]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 				ai_will_do = {
@@ -615,30 +617,30 @@ religion_group = {
 					alias_name[modifier_rule] = alias_match_left[modifier_rule]
 				}
 			}
-			
+
 			## cardinality = 0..1
 			send_papal_legate = {
 				## cardinality = 0..1
 				cost = int
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    potential = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    allow = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    effect = {
 				   alias_name[effect] = alias_match_left[effect]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 				ai_will_do = {
@@ -646,30 +648,30 @@ religion_group = {
 					alias_name[modifier_rule] = alias_match_left[modifier_rule]
 				}
 			}
-			
+
 			## cardinality = 0..1
 			sanction_commercial_monopoly = {
 				## cardinality = 0..1
 				cost = int
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    potential = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    allow = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    effect = {
 				   alias_name[effect] = alias_match_left[effect]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 				ai_will_do = {
@@ -677,30 +679,30 @@ religion_group = {
 					alias_name[modifier_rule] = alias_match_left[modifier_rule]
 				}
 			}
-			
+
 			## cardinality = 0..1
 			investigate_heresy = {
 				## cardinality = 0..1
 				curia_treasury_cost = int
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    potential = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    allow = {
 				   alias_name[trigger] = alias_match_left[trigger]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 			    effect = {
 				   alias_name[effect] = alias_match_left[effect]
 				}
-				
+
 				## cardinality = 0..1
 			    ## replace_scope = { this = country root = country }
 				ai_will_do = {
@@ -712,12 +714,12 @@ religion_group = {
 
 		## cardinality = 0..1
 		ancestors = yes
-		
+
 		heretic = {
 			## cardinality = 1..inf
 			localisation
 		}
-		
+
 		## cardinality = 0..1
 		gurus = {
 			## cardinality = 0..inf
@@ -750,12 +752,12 @@ religion_group = {
 						## cardinality = 0..inf
 						alias_name[modifier] = alias_match_left[modifier]
 					}
-				}	
+				}
 			}
 		}
 		## cardinality = 0..1
 		uses_judaism_power = yes
-		
+
 		## cardinality = 0..1
 		celebrate = {
 			cost = int

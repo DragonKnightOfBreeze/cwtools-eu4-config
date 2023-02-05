@@ -57,26 +57,26 @@ country_color_file = {
 
 country_file = {
 	graphical_culture = enum[graphical_cultures]
-	
+
 	## cardinality = 0..1
 	cannot_form_from_collapse_nation = yes
-	
+
 	## cardinality = 0..1
 	preferred_religion = <religion>
 
 	## cardinality = 0..1
 	historical_score = int
-	
+
 	## cardinality = 0..1
 	random_nation_chance = int[0..100]
-	
+
 	## cardinality = 0..1
 	colonial_parent = enum[country_tags]
-	
+
 	## cardinality = 0..1
 	###Jan Mayen tag: Excludes them from random countries, makes sure they only can be spawned once
 	right_to_bear_arms = yes
-	
+
 	## cardinality = 0..1
 	historical_council = enum[council_positions]
 
@@ -87,11 +87,12 @@ country_file = {
 	###Synthetics tag: Excludes them from random countries, makes sure they only can be spawned once
 	all_your_core_are_belong_to_us = yes
 
+	## color_type = rgb
 	color = {
 		## cardinality = 3..3
 		int[0..255]
 	}
-	
+
 	## cardinality = 0..1
 	revolutionary_colors = {
 		## cardinality = 3..3
@@ -144,11 +145,13 @@ country_file = {
 
 custom_country_colors = {
 	num_symbols = int
+	## color_type = rgb
 	## cardinality = 1..inf
 	color = {
 		## cardinality = 3..3
 		int[0..255]
 	}
+	## color_type = rgb
 	## cardinality = 1..inf
 	flag_color = {
 		## cardinality = 3..3

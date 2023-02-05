@@ -84,6 +84,7 @@ enums = {
 
 
 rebel_type = {
+	## color_type = rgb
 	color = {
 		## cardinality = 3..3
 		int[0..255]
@@ -98,12 +99,12 @@ rebel_type = {
 	religion = <religion>
 	defection = enum[rebel_defection]
 	## cardinality = 0..1
-	defect_delay = int				
+	defect_delay = int
 	independence = enum[rebel_independence]
 	unit_transfer = bool
 	gfx_type = enum[rebel_gfx_type]
-	will_relocate = bool	
-	
+	will_relocate = bool
+
 	## cardinality = 0..1
 	disband_on_leader_death = bool
 	## cardinality = 0..1
@@ -116,14 +117,14 @@ rebel_type = {
 	reinforcing = bool
 	general = bool
 	smart = bool
-	
+
 	## cardinality = 0..1
 	revolutionary = bool
-	
+
 	artillery = float[0.0..1.0]
 	infantry = float[0.0..1.0]
 	cavalry = float[0.0..1.0]
-	
+
 	morale = float
 
 	handle_action_negotiate = bool
@@ -131,34 +132,34 @@ rebel_type = {
 	## cardinality = 0..1
 	handle_action_build_core = bool
 	## cardinality = 0..1
-	handle_action_send_missionary = bool		
-	
+	handle_action_send_missionary = bool
+
 	##replace_scope = { this = province root = province }
 	###The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
- 
+
 	##replace_scope = { this = province root = province }
  	###This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
- 
+
 	##replace_scope = { this = province root = province from = country }
 	###root = province, from = owner
  	siege_won_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	##replace_scope = { this = province root = province from = country }
 	###root = province, from = owner
 	siege_won_effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}
-	
+
 	##replace_scope = { this = country root = country from = country }
 	###root = country negotiating, from = rebels
 	can_negotiate_trigger = {
@@ -170,10 +171,10 @@ rebel_type = {
 	can_enforce_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	###Localisation for their demands
 	demands_description = localisation
-	
+
 	##replace_scope = { this = country root = country from = country }
 	###root = country negotiating, from = rebels
 	demands_enforced_effect = {
