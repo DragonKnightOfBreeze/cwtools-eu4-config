@@ -2734,7 +2734,7 @@ on_action = {
     subtype[on_battle_lost_unit] = {
         alias_name[effect] = alias_match_left[effect]
 	}
-	
+
     ## replace_scope = { root = country this = country }
     subtype[on_holy_order_established] = {
         ## cardinality = 0..1

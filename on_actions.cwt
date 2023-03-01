@@ -1,0 +1,457 @@
+on_actions = {
+	## replace_scopes = { this = country root = country }
+	on_startup = country
+
+	## replace_scopes = { this = country root = country }
+	on_religion_change = country
+
+	## replace_scopes = { this = country root = country }
+	on_secondary_religion_change = country
+
+	## replace_scopes = { this = country root = country }
+	on_colonial_liberation = country
+
+	## replace_scopes = { this = country root = country }
+	on_colonial_reintegration = country
+
+	## replace_scopes = { this = country root = country }
+	on_peace_actor = country
+
+	## replace_scopes = { this = country root = country }
+	on_peace_recipient = country
+
+	## replace_scopes = { this = country root = country }
+	on_new_monarch = country
+
+	## replace_scopes = { this = country root = country }
+	on_new_consort = country
+
+	## replace_scopes = { this = country root = country }
+	on_monarch_death = country
+
+	## replace_scopes = { this = country root = country }
+	on_regent = country
+
+	## replace_scopes = { this = country root = country }
+	on_new_term_election = country
+
+	## replace_scopes = { this = country root = country }
+	on_death_election = country
+
+	## replace_scopes = { this = country root = country }
+	on_death_foreign_slave_ruler = country
+
+	## replace_scopes = { this = country root = country }
+	on_replace_governor = country
+
+	## replace_scopes = { this = country root = country }
+	on_bankruptcy = country
+
+	## replace_scopes = { this = country root = country }
+	on_diplomatic_annex = country
+
+	## replace_scopes = { this = country root = country }
+	on_heir_death = country
+
+	## replace_scopes = { this = country root = country }
+	on_queen_death = country
+
+	## replace_scopes = { this = country root = country }
+	on_new_heir = country
+
+	## replace_scopes = { this = country root = country }
+	on_weak_heir_claim = country
+
+	## replace_scopes = { this = country root = country }
+	on_heir_needed_theocracy = country
+
+	## replace_scopes = { this = country root = country }
+	on_government_change = country
+
+	## replace_scopes = { this = country root = country }
+	on_native_change_government = country
+
+	## replace_scopes = { this = country root = country }
+	on_overextension_pulse = country
+
+	## replace_scopes = { this = country root = country }
+	on_bi_yearly_pulse = country
+
+	## replace_scopes = { this = country root = country }
+	on_bi_yearly_pulse_2 = country
+
+	## replace_scopes = { this = country root = country }
+	on_bi_yearly_pulse_3 = country
+
+	## replace_scopes = { this = country root = country }
+	on_bi_yearly_pulse_4 = country
+
+	## replace_scopes = { this = country root = country }
+	on_thri_yearly_pulse = country
+
+	## replace_scopes = { this = country root = country }
+	on_thri_yearly_pulse_2 = country
+
+	## replace_scopes = { this = country root = country }
+	on_thri_yearly_pulse_3 = country
+
+	## replace_scopes = { this = country root = country }
+	on_thri_yearly_pulse_4 = country
+
+	## replace_scopes = { this = country root = country }
+	on_four_year_pulse = country
+
+	## replace_scopes = { this = country root = country }
+	on_four_year_pulse_2 = country
+
+	## replace_scopes = { this = country root = country }
+	on_four_year_pulse_3 = country
+
+	## replace_scopes = { this = country root = country }
+	on_four_year_pulse_4 = country
+
+	## replace_scopes = { this = country root = country }
+	on_five_year_pulse = country
+
+	## replace_scopes = { this = country root = country }
+	on_five_year_pulse_2 = country
+
+	## replace_scopes = { this = country root = country }
+	on_five_year_pulse_3 = country
+
+	## replace_scopes = { this = country root = country }
+	on_five_year_pulse_4 = country
+
+	## replace_scopes = { this = country root = country }
+	on_parliament_debate_failed = country
+
+	## replace_scopes = { this = country root = country }
+	on_parliament_debate_succeeded = country
+
+	## replace_scopes = { this = country root = country }
+	on_harmonized_pagan = country
+
+	## replace_scopes = { this = country root = country }
+	on_harmonized_christian = country
+
+	## replace_scopes = { this = country root = country }
+	on_harmonized_muslim = country
+
+	## replace_scopes = { this = country root = country }
+	on_harmonized_jewish_group = country
+
+	## replace_scopes = { this = country root = country }
+	on_harmonized_zoroastrian_group = country
+
+	## replace_scopes = { this = country root = country }
+	on_harmonized_dharmic = country
+
+	## replace_scopes = { this = country root = country }
+	on_harmonized_mahayana = country
+
+	## replace_scopes = { this = country root = country }
+	on_harmonized_buddhism = country
+
+	## replace_scopes = { this = country root = country }
+	on_harmonized_shinto = country
+
+	## replace_scopes = { this = country root = country }
+	on_harmonized_vajrayana = country
+
+	## replace_scopes = { this = country root = country }
+	on_gain_great_power_status = country
+
+	## replace_scopes = { this = country root = country }
+	on_lose_great_power_status = country
+
+	## replace_scopes = { this = country root = country }
+	on_leader_recruited = country
+
+	## replace_scopes = { this = country root = country }
+	on_general_recruited = country
+
+	## replace_scopes = { this = country root = country }
+	on_admiral_recruited = country
+
+	## replace_scopes = { this = country root = country }
+	on_conquistador_recruited = country
+
+	## replace_scopes = { this = country root = country }
+	on_explorer_recruited = country
+
+	## replace_scopes = { this = country root = country }
+	on_russian_streltsy = country
+
+	## replace_scopes = { this = country root = country }
+	on_russian_sudebnik = country
+
+	## replace_scopes = { this = country root = country }
+	on_russian_oprichnina = country
+
+	## replace_scopes = { this = country root = country }
+	on_fetishist_cult_change = country
+
+	## replace_scopes = { this = country root = country }
+	on_lock_hre_religion = country
+
+	## replace_scopes = { this = country root = country }
+	on_change_hre_religion = country
+
+	## replace_scopes = { this = country root = country }
+	on_death_has_harem = country
+
+	## replace_scopes = { this = country root = country }
+	on_select_heir_from_harem = country
+
+	## replace_scopes = { this = country root = country }
+	on_successive_emperor = country
+
+	## replace_scopes = { this = country root = country }
+	on_hre_religion_white_peace = country
+
+	## replace_scopes = { this = country root = country }
+	on_dismantle_revolution = country
+
+	## replace_scopes = { this = country root = country }
+	on_buy_religious_reform = country
+
+	## replace_scopes = { this = country root = country }
+	on_circumnavigation = country
+
+	## replace_scopes = { this = country root = country }
+	on_become_free_city = country
+
+	## replace_scopes = { this = country root = country }
+	on_remove_free_city = country
+
+	## replace_scopes = { this = country root = country }
+	on_released_hre_member = country
+
+	## replace_scopes = { this = country root = country }
+	on_hre_member_false_religion = country
+
+	## replace_scopes = { this = country root = country }
+	on_hre_member_true_religion = country
+
+	## replace_scopes = { this = country root = country }
+	on_hre_released_vassal = country
+
+	## replace_scopes = { this = country root = country }
+	on_hre_transfered_vassal = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_enforce_rebel_demands = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_war_won = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_war_lost = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_battle_won_country = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_battle_lost_country = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_annexed = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_chinese_empire_dismantled = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_mandate_of_heaven_gained = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_mandate_of_heaven_lost = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_dependency_gained = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_dependency_lost = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_create_vassal = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_accept_tribute = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_refuse_tribute = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_integrate = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_hre_defense = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_hre_non_defense = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_hre_wins_defensive_war = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_hre_member_annexed = country
+
+	## replace_scopes = { this = country root = country from = province }
+	on_siege_won_country = country
+
+	## replace_scopes = { this = country root = country from = province }
+	on_siege_lost_country = country
+
+	## replace_scopes = { this = province root = province from = country }
+	on_battle_won_province = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_battle_lost_province = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_abandon_colony = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_added_to_trade_company = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_removed_from_company = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_company_formed = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_company_disolved = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_siege_won_province = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_siege_lost_province = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_company_chartered = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_convert_by_trade_policy = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_province_owner_change = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_regiment_recruited = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_mercenary_recruited = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_conquistador_native = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_explore_coast = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_conquistador_empty = province
+
+	## replace_scopes = { this = province root = province }
+	on_janissaries_raised = province
+
+	## replace_scopes = { this = province root = province }
+	on_reform_enacted = province
+
+	## replace_scopes = { this = province root = province }
+	on_reform_changed = province
+
+	## replace_scopes = { this = province root = province }
+	on_trade_company_investment = province
+
+	## replace_scopes = { this = province root = province }
+	on_center_of_trade_upgrade = province
+
+	## replace_scopes = { this = province root = province }
+	on_center_of_trade_downgrade = province
+
+	## replace_scopes = { this = province root = province }
+	on_culture_promoted = province
+
+	## replace_scopes = { this = province root = province }
+	on_adm_development = province
+
+	## replace_scopes = { this = province root = province }
+	on_dip_development = province
+
+	## replace_scopes = { this = province root = province }
+	on_mil_development = province
+
+	## replace_scopes = { this = province root = province }
+	on_province_religion_converted = province
+
+	## replace_scopes = { this = province root = province }
+	on_province_culture_converted = province
+
+	## replace_scopes = { this = province root = province }
+	on_add_pasha = province
+
+	## replace_scopes = { this = province root = province }
+	on_remove_pasha = province
+
+	## replace_scopes = { this = province root = province }
+	on_consecrate_patriarch = province
+
+	## replace_scopes = { this = province root = province }
+	on_revoke_estate_land_ai_post = province
+
+	## replace_scopes = { this = province root = province }
+	on_revoke_estate_land_post = province
+
+	## replace_scopes = { this = province root = province }
+	on_revoke_estate_land_ai = province
+
+	## replace_scopes = { this = province root = province }
+	on_revoke_estate_land = province
+
+	## replace_scopes = { this = province root = province }
+	on_grant_estate_land = province
+
+	## replace_scopes = { this = province root = province }
+	on_colonial_pulse = province
+
+	## replace_scopes = { this = province root = province }
+	on_siberian_pulse = province
+
+	## replace_scopes = { this = province root = province }
+	on_hre_province_reconquest = province
+
+	## replace_scopes = { this = province root = province from = country }
+	on_trade_good_changed = province
+
+	## replace_scopes = { this = country root = country }
+	on_rebels_break_country = country
+
+	## replace_scopes = { this = country root = country }
+	on_pre_adm_advisor_fired = country
+
+	## replace_scopes = { this = country root = country }
+	on_pre_dip_advisor_fired = country
+
+	## replace_scopes = { this = country root = country }
+	on_pre_mil_advisor_fired = country
+
+	## replace_scopes = { this = country root = country }
+	on_post_adm_advisor_fired = country
+
+	## replace_scopes = { this = country root = country }
+	on_post_dip_advisor_fired = country
+
+	## replace_scopes = { this = country root = country }
+	on_post_mil_advisor_fired = country
+
+	## replace_scopes = { this = country root = country }
+	on_embrace_revolution = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_dismantle_revolution = country
+
+	## replace_scopes = { this = country root = country from = country }
+	on_emperor_elected = country
+}
