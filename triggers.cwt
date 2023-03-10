@@ -5,9 +5,9 @@ alias[trigger:<scripted_trigger>] = bool
 ## scope = any
 alias[trigger:<scripted_trigger>] = {
 	## cardinality = 1..inf
-	enum[scripted_effect_params] = scalar
+	$parameter = scalar
 	## cardinality = 1..inf
-	enum[scripted_effect_params] = scope_field
+	$parameter = scope_field
 }
 
 alias[trigger:enum[scripted_effect_params_dollar]] = {
@@ -2309,16 +2309,16 @@ alias[trigger:is_in_war] = {
 
 	## cardinality = 0..inf
 	defenders = enum[country_tags]
-	
+
 	## cardinality = 0..inf
 	attackers = scope[country]
-	
+
 	## cardinality = 0..inf
 	attackers = enum[country_tags]
-	
+
 	## cardinality = 0..inf
 	participants = scope[country]
-	
+
 	## cardinality = 0..inf
 	participants = enum[country_tags]
 }
@@ -4323,7 +4323,7 @@ alias[trigger:variable_arithmetic_trigger] = {
 
 	## cardinality = 0..1
 	custom_tooltip = localisation
-	
+
 	## cardinality = 0..inf
 	export_to_variable = {
 		enum[which_varname] = value_set[variable]
@@ -5491,7 +5491,7 @@ alias[trigger:num_of_hussars] = int
 alias[trigger:owes_favors] = {
 	who = scope[country]
 	who = enum[country_tags]
-	value = int	
+	value = int
 }
 
 ## scope = country
