@@ -1273,7 +1273,7 @@ alias[trigger:has_discovered] = bool
 
 ## scope = any
 ###Returns true if the DLC X is enabled.
-alias[trigger:has_dlc] = enum[DLCs]
+alias[trigger:has_dlc] = enum[dlc]
 
 ## scope = country
 ###Returns true if the protectorate has divert trade to its overlord.

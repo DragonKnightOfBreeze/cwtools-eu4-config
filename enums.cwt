@@ -60,7 +60,7 @@ enums = {
 		siberian
 		any
 	}
-	enum[DLCs] = { #todo
+	enum[dlc] = { #todo
 		"Rights of Man"
 		"El Dorado"
 		"The Cossacks"
