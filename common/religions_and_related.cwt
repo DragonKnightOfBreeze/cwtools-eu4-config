@@ -205,7 +205,7 @@ religion_group = {
 		## color_type = hsv
 		color = {
 			## cardinality = 3..3
-			float[0.0..1.0]
+			float
 		}
 
 		## cardinality = 0..1
