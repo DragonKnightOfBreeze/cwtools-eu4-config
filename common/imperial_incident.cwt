@@ -14,7 +14,7 @@ types = {
 }
 
 imperial_incident = {
-	event = <event.country>
+	event = <event.country_event>
 	default_option = int
 
 	## cardinality = 0..1

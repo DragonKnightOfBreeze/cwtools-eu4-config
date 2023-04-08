@@ -1,33 +1,30 @@
-
 types = {
-	## graph_related_types = { }
+	## graph_related_types = {}
 	type[event] = {
-		name_field = "id"
-
 		path = "game/events"
+		file_extension = .txt
+		name_field = id
 
-		localisation = {
-			## primary
-			title = title
-		}
-
-		## type_key_filter = country_event
-		## push_scope = country
-		subtype[country] = {
-		}
-		## type_key_filter = province_event
-		## push_scope = province
-		subtype[province] = {
-		}
-		subtype[mean_time_to_happen] = {
-			mean_time_to_happen = {
-			}
-		}
 		subtype[hidden] = {
 			hidden = yes
 		}
 		subtype[triggered] = {
 			is_triggered_only = yes
+		}
+		subtype[mean_time_to_happen] = {
+			mean_time_to_happen = {}
+		}
+
+		## type_key_filter = country_event
+		## push_scope = country
+		subtype[country] = {}
+		## type_key_filter = province_event
+		## push_scope = province
+		subtype[province] = {}
+
+		localisation = {
+			## primary
+			title = title
 		}
 	}
 }
@@ -42,7 +39,6 @@ event = {
 		picture = enum[dlc_event_pictures]
 		picture = none
 	}
-
 
 	subtype[!hidden] = {
 		title = localisation
