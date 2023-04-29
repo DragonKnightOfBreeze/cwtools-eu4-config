@@ -49,12 +49,13 @@ game_age = {
 		increase_autonomy_command = int
 		debase_currency = int
 		execute_rebel_acceptance_command = int
-		seat_in_parliament = int
+		automatic_seat_in_parliament = int
+		manual_seat_in_parliament = int
 		war_exhaustion = int
 	}
 	
 	objectives = {
-		## cardinality = 4..9
+		## cardinality = 4..inf
 		## replace_scope = { root = country this = country }
 		localisation = {
 			## cardinality = 0..1

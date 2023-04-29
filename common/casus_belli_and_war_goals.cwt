@@ -16,12 +16,10 @@ types = {
 	type[wargoal_type] = {
 		path = "game/common/wargoal_types"
 
-#		localisation = {
-#			## required
-#			name = "$"
-#			## required
-#			description = "$_desc"
-#		}
+		localisation = {
+			name = "$"
+			description = "$_desc"
+		}
 		subtype[demand_provinces] = {
 			peace_options = {
 				po_demand_provinces
@@ -130,6 +128,13 @@ casus_belli = {
 	## replace_scope = { this = country root = country from = country }
 	###A condition that automatically activates a CB. May or may not work for triggered CBs, needs verification.
 	prerequisites = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country from = country }
+	###Must be true for prequisites to be checked, used to avoid doing expensive prerequisite checks against every country in the world.
+	prerequisites_self = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
