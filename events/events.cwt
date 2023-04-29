@@ -21,6 +21,9 @@ types = {
 		## type_key_filter = province_event
 		## push_scope = province
 		subtype[province_event] = {}
+		## type_key_filter = unit_event
+		## push_scope = unit
+		subtype[unit_event] = {}
 
 		localisation = {
 			## primary
