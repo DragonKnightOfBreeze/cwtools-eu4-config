@@ -282,9 +282,9 @@ alias[effect:trigger_switch] = {
 ## scope = any
 ###The random scope is used to add a single random roll to a set of effects. The chance is out of 100.
 alias[effect:random] = {
-	###Out of 100
+	### Out of 100
 	chance = float[0.0..100.0]
-
+	## cardinality = 0..inf
 	alias_name[effect] = alias_match_left[effect]
 }
 
