@@ -67,11 +67,11 @@ disaster = {
 
 	## cardinality = 0..1
 	###Event fired on the disaster's progress reaching 100 and the disaster officially starting.
-	on_start = <event.country_event>
+	on_start = <event.country>
 
 	## cardinality = 0..1
 	###Event fired when the disaster ends (after having officially started).
-	on_end = <event.country_event>
+	on_end = <event.country>
 
 	## cardinality = 0..1
 	###Effects executed when the disaster reaches 100% progress and happens.
@@ -85,14 +85,14 @@ disaster = {
 		## cardinality = 0..1
 		events = {
 			## cardinality = 0..inf
-			<event.country_event>
+			<event.country>
 		}
 		## cardinality = 0..1
 		random_events = {
 			## cardinality = 0..inf
 			int = 0
 			## cardinality = 0..inf
-			int = <event.country_event>
+			int = <event.country>
 		}
 	}
 
