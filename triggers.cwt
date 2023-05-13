@@ -4,10 +4,8 @@ alias[trigger:<scripted_trigger>] = bool
 
 ## scope = any
 alias[trigger:<scripted_trigger>] = {
-	## cardinality = 1..inf
-	$parameter = scalar
-	## cardinality = 1..inf
-	$parameter = scope_field
+	## cardinality = 0..inf
+	$parameter = $parameter_value
 }
 
 alias[trigger:enum[scripted_effect_params_dollar]] = {
