@@ -1528,18 +1528,17 @@ alias[trigger:any_trade_node_member_province] = {
 
 ## scope = any
 alias[trigger:if] = {
-	limit = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
+	## cardinality = ~1..1
+	## severity = info
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
 ## scope = any
 alias[trigger:else_if] = {
+	## cardinality = ~1..1
 	## severity = info
-	limit = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
@@ -1547,8 +1546,6 @@ alias[trigger:else_if] = {
 alias[trigger:else] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
-
-
 
 #Those of which the wiki knows not
 
