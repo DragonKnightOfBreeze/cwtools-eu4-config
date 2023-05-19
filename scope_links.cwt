@@ -232,18 +232,15 @@ alias[effect:tooltip] = {
 
 ## scope = any
 alias[effect:if] = {
-	limit = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
+	## cardinality = ~1..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
 	alias_name[effect] = alias_match_left[effect]
 }
 
 ## scope = any
 alias[effect:else_if] = {
-	## severity = info
-	limit = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
+	## cardinality = ~1..1
+	limit = { alias_name[trigger] = alias_match_left[trigger] }
 	alias_name[effect] = alias_match_left[effect]
 }
 
@@ -1529,7 +1526,6 @@ alias[trigger:any_trade_node_member_province] = {
 ## scope = any
 alias[trigger:if] = {
 	## cardinality = ~1..1
-	## severity = info
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
 	alias_name[trigger] = alias_match_left[trigger]
 }
@@ -1537,7 +1533,6 @@ alias[trigger:if] = {
 ## scope = any
 alias[trigger:else_if] = {
 	## cardinality = ~1..1
-	## severity = info
 	limit = { alias_name[trigger] = alias_match_left[trigger] }
 	alias_name[trigger] = alias_match_left[trigger]
 }
