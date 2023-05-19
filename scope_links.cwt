@@ -259,15 +259,12 @@ alias[effect:while] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+### The trigger_switch scope is used in conjuction with triggers that return discrete values. You list each trigger value you wish to act on, and add the effects within.
 ## scope = any
-###The trigger_switch scope is used in conjuction with triggers that return discrete values. You list each trigger value you wish to act on, and add the effects within.
 alias[effect:trigger_switch] = {
-	on_trigger = scalar
-
-	## cardinality = 2..inf
-	scalar = {
-		alias_name[effect] = alias_match_left[effect]
-	}
+	on_trigger = alias_keys_field[trigger]
+	## cardinality = ~1..inf
+	scalar = { alias_name[effect] = alias_match_left[effect] }
 	## cardinality = 0..1
 	advisor_events_adm = { kill_advisor_by_category_effect = { ADM = yes } }
 	## cardinality = 0..1
