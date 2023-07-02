@@ -62,15 +62,15 @@ alias[trigger:accepted_culture] = scope[province]
 alias[trigger:active_major_mission] = <mission> #todo
 
 ## scope = country
-###Returns true if the ountry has a ruler with administrative skill of at least X, or at least as high military skill as the ruler of the specified country.
+###Returns true if the country has a ruler with administrative skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:adm] = int
 
 ## scope = country
-###Returns true if the ountry has a ruler with administrative skill of at least X, or at least as high military skill as the ruler of the specified country.
+###Returns true if the country has a ruler with administrative skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:adm] = scope[country]
 
 ## scope = country
-###Returns true if the ountry has a ruler with administrative skill of at least X, or at least as high military skill as the ruler of the specified country.
+###Returns true if the country has a ruler with administrative skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:adm] = enum[country_tags]
 
 ## scope = country
@@ -685,15 +685,15 @@ alias[trigger:devotion] = scope[country]
 alias[trigger:devotion] = enum[country_tags]
 
 ## scope = country
-###Returns true if the ountry has a ruler with diplomatic skill of at least X, or at least as high military skill as the ruler of the specified country.
+###Returns true if the country has a ruler with diplomatic skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:dip] = int
 
 ## scope = country
-###Returns true if the ountry has a ruler with diplomatic skill of at least X, or at least as high military skill as the ruler of the specified country.
+###Returns true if the country has a ruler with diplomatic skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:dip] = scope[country]
 
 ## scope = country
-###Returns true if the ountry has a ruler with diplomatic skill of at least X, or at least as high military skill as the ruler of the specified country.
+###Returns true if the country has a ruler with diplomatic skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:dip] = enum[country_tags]
 
 ## scope = country
@@ -1378,7 +1378,7 @@ alias[trigger:has_global_flag] = value[global_flag]
 ## scope = country
 ###Returns true if the value of the specified modifier is at least X for the country.
 alias[trigger:has_global_modifier_value] = {
-	which = enum[modifiers] #todo
+	which = enum[modifier_value] #todo
 	value = float
 	## cardinality = 0..1
 	extra_shortcut = bool
@@ -1491,7 +1491,7 @@ alias[trigger:has_leader_with] = {
 ## scope = province
 ###Returns true if the value of the specified modifier is at least X for the province..
 alias[trigger:has_local_modifier_value] = {
-	which = enum[modifiers] #todo
+	which = enum[modifier_value] 
 	value = float
 }
 
@@ -2804,15 +2804,15 @@ alias[trigger:mercantilism] = float
 alias[trigger:meritocracy] = int
 
 ## scope = country
-###Returns true if the ountry has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
+###Returns true if the country has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:mil] = int
 
 ## scope = country
-###Returns true if the ountry has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
+###Returns true if the country has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:mil] = scope[country]
 
 ## scope = country
-###Returns true if the ountry has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
+###Returns true if the country has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:mil] = enum[country_tags]
 
 ## scope = country
@@ -5573,7 +5573,7 @@ alias[trigger:has_government_power] = {
 	value = int
 }
 
-## scope = ountry
+## scope = country
 ###Returns true if the government power is frozen
 alias[trigger:government_power_frozen] = {
 	mechanic_type = <government_mechanic>
@@ -5843,3 +5843,14 @@ alias[trigger:num_of_caravel] = int
 
 ## scope = country
 alias[trigger:num_of_voc_indiamen] = int
+
+## scope = country
+###Country will support an Imperial Reform. Imperial Reforms are found in /Europa Universalis IV/common/imperial_reforms/00_hre.txt.
+alias[trigger:will_back_reform] = <imperial_reform>
+
+## scope = country
+alias[trigger:has_spare_flagship_capacity] = bool
+
+## scope = country
+###Returns true if the country is a neighbor of the specified province.
+alias[trigger:is_neighbor_of_province] = <province_id>

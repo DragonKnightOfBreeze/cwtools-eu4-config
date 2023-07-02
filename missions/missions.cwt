@@ -36,12 +36,7 @@ mission_series = {
 
 	## cardinality = 0..1
 	potential_on_load = {
-		## cardinality = 0..inf
-		has_dlc = enum[dlc]
-		## cardinality = 0..inf
-		NOT = {
-			has_dlc = enum[dlc]
-		}
+		alias_name[trigger] = alias_match_left[trigger]
 	}
 
 	## replace_scope = { this = country root = country }
@@ -50,7 +45,7 @@ mission_series = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
-	## cardinality = 1..inf
+	## cardinality = 0..inf
 	<mission> = {
 		icon = <sprite>
 		## cardinality = 0..1

@@ -199,6 +199,9 @@ enums = {
 		dlc121
 		dlc122
 		dlc123
+		dlc124
+		dlc125
+		dlc126
 	}
 	enum[key_name] = {
 		key
@@ -394,11 +397,31 @@ enums = {
 		}
 		start_from_root = yes
 	}
-	#no idea what all can go here
-	enum[modifiers] = {
+	enum[modifier_value] = {
+		army_tradition
+		artillery_power
+		build_cost
 		cavalry_power
+		core_creation
+		defensiveness
+		development_cost
+		diplomatic_reputation
 		discipline
+		female_advisor_chance
+		galley_power
+		global_manpower_modifier
+		global_trade_goods_size_modifier
+		heavy_ship_power
+		infantry_power
+		land_forcelimit_modifier
+		land_morale
+		mercenary_discipline
+		missionaries
+		naval_forcelimit_modifier
 		ship_durability
+		stability_cost_to_declare_war
+		tolerance_heathen
+		tolerance_heretic
 	}
 	enum[native_policies] = {
 		native_policy_coexist
@@ -526,5 +549,13 @@ enums = {
 	enum[random_repeating] = {
 		random
 		random_repeating
+	}
+	enum[message_options] = {
+		MULTISUBJECTINTERACT
+	}
+	enum[message_data_options] = {
+		sword_hunt
+		sankin_kotai
+		expel_ronin
 	}
 }

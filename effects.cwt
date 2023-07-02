@@ -46,11 +46,18 @@ alias[effect:divide_variable] = {
 }
 
 ## scope = any
+### Paradox reports that which = is optional
 alias[effect:change_variable] = {
 	## cardinality = 1..2
 	which = value_set[variable]
 	## cardinality = 0..1
 	value = float
+}
+## scope = any
+### Paradox reports that which = is optional
+alias[effect:change_variable] = {
+	## cardinality = 1..2
+	value_set[variable] = float
 }
 
 ## scope = any
@@ -143,6 +150,10 @@ alias[effect:add_country_modifier] = {
 	## cardinality = 0..1
 	###The string used to override the automatic duration string.
 	desc = localisation
+	## cardinality = 0..1
+	message = enum[message_options]
+	## cardinality = 0..1
+	message_data = enum[message_data_options]
 }
 
 ## scope = country
@@ -301,7 +312,7 @@ alias[effect:add_tribal_allegiance] = int
 
 ## scope = country
 ###Changes the Organist-Statist balance. Positive moves towards Orangist, negative moves towards Statists.
-alias[effect:change_statists_vs_orangists] = float[-2.0..2.0]
+alias[effect:change_statists_vs_orangists] = float[-10.0..1.0]
 
 ## scope = country
 ###Changes the Organist-Monarchist balance. Positive (probably) moves towards Monarchist, negative (probably) moves towards Statists.
@@ -984,6 +995,8 @@ alias[effect:create_general] = {
 	culture = enum[country_tags]
 	## cardinality = 0..1
 	name = localisation_synced
+	## cardinality = 0..1
+	female = bool
 }
 
 ## scope = country
@@ -1753,10 +1766,16 @@ alias[effect:convert_female_ruler_to_general] = int
 ## scope = country
 ###Converts a male ruler into a general, a number can be provided instead of 'yes' to use as tradition during generation.
 alias[effect:convert_ruler_to_general] = yes
-
 ## scope = country
 ###Converts a male ruler into a general, a number can be provided instead of 'yes' to use as tradition during generation.
 alias[effect:convert_ruler_to_general] = int[0..inf]
+
+## scope = country
+###Converts a male ruler into a admiral, a number can be provided instead of 'yes' to use as tradition during generation.
+alias[effect:convert_ruler_to_admiral] = yes
+## scope = country
+###Converts a male ruler into a admiral, a number can be provided instead of 'yes' to use as tradition during generation.
+alias[effect:convert_ruler_to_admiral] = int[0..inf]
 
 ## scope = country
 ###Adds an event modifier to the current scope as a ruler modifier. Ruler modifiers are cleared when the ruler dies.
@@ -1892,6 +1911,8 @@ alias[effect:define_ruler] = {
 	change_dip = int[-6..6]
 	## cardinality = 0..1
 	change_mil = int[-6..6]
+	## cardinality = 0..1
+	change_original_dynasty = bool
 }
 
 ## scope = country
@@ -4227,3 +4248,12 @@ alias[effect:create_unit_forcelimit_percentage] = {
 
 ## scope = province
 alias[effect:add_local_autonomy_no_authority_effect] = float
+
+## scope = country
+###Removes the current consort of the current scope, saving them to the unique string.
+alias[effect:exile_consort_as] = value_set[exiled_consort]
+
+## scope = country
+###Makes an exiled consort the consort of the current scope.
+## severity = warning
+alias[effect:set_consort] = value[exiled_consort]
