@@ -3,7 +3,6 @@ types = {
 	type[religion_group] = {
 		path = "game/common/religions"
 		localisation = {
-			## required
 			name = "$"
 			subtype[harmonized] = {
 				## optional
@@ -21,7 +20,6 @@ types = {
 		path = "game/common/religions"
 		skip_root_key = any
 		localisation = {
-			## required
 			name = "$"
 			## optional
 			desc = "$_religion_desc"
@@ -40,9 +38,8 @@ types = {
 	type[orthodox_icon] = {
 		path = "game/common/religions"
 		skip_root_key = { any any orthodox_icons }
-
+		
 		localisation = {
-			## required
 			name = "$"
 			## optional
 			desc = "desc_$"
@@ -53,7 +50,6 @@ types = {
 		skip_root_key = { any religious_schools }
 
 		localisation = {
-			## required
 			name = "$"
 			## optional
 			desc = "$_desc"
@@ -62,16 +58,13 @@ types = {
 	type[papal_policy] = {
 		path = "game/common/religions"
 		skip_root_key = { any any papacy }
-
 		localisation = {
-			## required
 			name = "$"
 		}
 	}
 	type[personal_deity] = {
 		path = "game/common/personal_deities"
 		localisation = {
-			## required
 			name = "$"
 			## optional
 			desc = "$_desc"
@@ -83,7 +76,6 @@ types = {
 			trading_policy = yes
 		}
 		localisation = {
-			## required
 			name = "$"
 		}
 	}
@@ -99,9 +91,7 @@ types = {
 		path = "game/common/religious_reforms"
 		skip_root_key = any
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_desc"
 		}
 	}
@@ -115,10 +105,8 @@ types = {
 			is_blessing = no
 		}
 		localisation = {
-			## required
 			name = "$"
 			subtype[church_aspect] = {
-				## required
 				desc = "desc_$"
 			}
 		}

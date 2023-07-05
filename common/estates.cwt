@@ -4,25 +4,20 @@ types = {
 		path = "game/common/estates"
 		path_strict = yes
 		localisation = {
-			## required
 			name = "$"
 		}
 	}
 	type[estate_privilege] = {
 		path = "game/common/estate_privileges"
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_desc"
 		}
 	}
 	type[estate_agenda] = {
 		path = "game/common/estate_agendas"
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_desc"
 		}
 	}
@@ -31,7 +26,6 @@ types = {
 		skip_root_key = any
 		name_field = "key"
 		localisation = {
-			## required
 			name = "$"
 		}
 	}
@@ -40,7 +34,6 @@ types = {
 		path = "game/common/estate_crown_land"
 		name_field = "key"
 		localisation = {
-			## required
 			name = "$"
 		}
 	}
@@ -49,7 +42,6 @@ types = {
 		path = "game/common/estate_crown_land"
 		name_field = "key"
 		localisation = {
-			## required
 			name = "$"
 		}
 	}

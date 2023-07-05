@@ -2,16 +2,14 @@
 types = {
 	type[opinion_modifier] = {
 		path = "game/common/opinion_modifiers"
-		
-		localisation = {
-			name = "$"
-		}
-
 		subtype[negative] = {
 			opinion = int[-9999..-1]
 		}
 		subtype[positive] = {
 			opinion = int[0..9999]
+		}
+		localisation = {
+			name = "$"
 		}
 	}
 }

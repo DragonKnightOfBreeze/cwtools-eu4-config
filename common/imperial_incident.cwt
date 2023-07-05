@@ -3,11 +3,8 @@ types = {
 		path = "game/common/imperial_incidents"
 
 		localisation = {
-			## required
 			name = "$"
-			## required
 			member_alert = "$_member_alert"
-			## required
 			emperor_alert = "$_emperor_alert"
 		}
 	}

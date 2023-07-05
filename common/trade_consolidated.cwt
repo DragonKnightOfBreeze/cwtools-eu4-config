@@ -3,21 +3,16 @@
 types = {
 	type[trade_good] = {
 		path = "game/common/tradegoods"
-
-		localisation = {
-			## required
-			name = "$"
-			## required
-			description = "$DESC"
-		}
-
 		subtype[latent] = {
 			is_latent = yes
+		}
+		localisation = {
+			name = "$"
+			desc = "$DESC"
 		}
 	}
 	type[trade_company] = {
 		path = "game/common/trade_companies"
-
 		localisation = {
 			## required
 			name = "$"
@@ -25,19 +20,14 @@ types = {
 	}
 	type[trade_company_investment] = {
 		path = "game/common/tradecompany_investments"
-
 		localisation = {
-			## required
 			name = "$"
-			## required
-			description = "$_desc"
+			desc = "$_desc"
 		}
 	}
 	type[trade_node_name] = {
 		path = "game/common/tradenodes"
-
 		localisation = {
-			## required
 			name = "$"
 		}
 	}
@@ -47,12 +37,9 @@ types = {
 	}
 	type[trading_policy] = {
 		path = "game/common/trading_policies"
-
 		localisation = {
-			## required
 			name = "$"
-			## required
-			description = "$_desc"
+			desc = "$_desc"
 		}
 	}
 	type[prices] = {
@@ -62,12 +49,9 @@ types = {
 	}
 	type[trade_center] = {
 		path = "game/common/centers_of_trade"
-
 		localisation = {
-			## required
 			name = "$"
-			## required
-			description = "$_desc"
+			desc = "$_desc"
 		}
 	}
 }

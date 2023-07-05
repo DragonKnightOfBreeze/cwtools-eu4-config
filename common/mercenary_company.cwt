@@ -3,7 +3,6 @@ types = {
 	type[mercenary_company] = {
 		path = "game/common/mercenary_companies"
 		localisation = {
-			## required
 			name = "$"
 		}
 	}

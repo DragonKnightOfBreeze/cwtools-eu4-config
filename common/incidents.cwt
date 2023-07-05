@@ -2,9 +2,7 @@ types = {
 	type[incident] = {
 		path = "game/common/incidents"
 		localisation = {
-			## required
 			name = "$_title"
-			## required
 			desc = "$_desc"
 		}
 	}

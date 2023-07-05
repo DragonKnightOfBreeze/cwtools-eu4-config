@@ -3,34 +3,22 @@ types = {
 	type[faction] = {
 		path = "game/common/factions"
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_FACTION_DESC"
-			## required
 			influence_modifier = "$_influence"
-			#Old Chinese factions lack this and I can't see what it does
-#			## required
-#			support = "support_$_title"
-#			## required
-#			support_desc = "support_$_desc"
 		}
 	}
 	type[fervor] = {
 		path = "game/common/fervor"
 		localisation = {
-			## required
 			name = "$"
-			## required
 			short = "$_short"
 		}
 	}
 	type[cult] = {
 		path = "game/common/fetishist_cults"
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_desc"
 		}
 	}
@@ -40,82 +28,65 @@ types = {
 	type[insult] = {
 		path = "game/common/insults"
 		localisation = {
-			## required
 			insult = "$"
 		}
 	}
 	type[natives] = {
 		path = "game/common/natives"
 		localisation = {
-			## required
 			name = "$"
 		}
 	}
 	type[decree] = {
 		path = "game/common/decrees"
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_desc"
-			## required
 			title = "$_title"
 		}
 	}
 	type[isolationism] = {
 		path = "game/common/isolationism"
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_desc"
-			## required
 			title = "$_title"
 		}
 	}
 	type[naval_doctrine] = {
 		path = "game/common/naval_doctrines"
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_desc"
 		}
 	}
 	type[policy] = {
 		path = "game/common/policies"
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "desc_$"
 		}
 	}
 	type[professionalism_modifier] = {
 		path = "game/common/professionalism"
 		localisation = {
-			## required
 			name = "$"
 		}
 	}
 	type[edict] = {
 		path = "game/common/state_edicts"
 		localisation = {
-			## required
 			name = "$"
 		}
 	}
 	type[power_projection_modifier] = {
 		path = "game/common/powerprojection"
-
 		subtype[positive] = {
 			power = float[0.1..inf]
 		}
-
 		subtype[negative] = {
 			power = float[-1000.0..-0.1]
 		}
-
 	}
 	type[client_state] = {
 		path = "game/common/client_states"

@@ -3,11 +3,8 @@ types = {
 	type[disaster] = {
 		path = "game/common/disasters"
 		localisation = {
-			## required
 			name = "$"
-			#Both desc_ and _desc exist for different disasters, but as far as I can tell neither are used
-#			## required
-#			desc = "desc_$"
+			desc = "$_desc"
 		}
 	}
 }

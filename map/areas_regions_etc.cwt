@@ -13,14 +13,11 @@ types = {
 	type[area] = {
 		path = "game/map"
 		path_file = "area.txt"
-
 		subtype[used] = {
 			## cardinality = 1..inf
 			scalar
 		}
-
 		localisation = {
-			## required
 			name = "$"
 		}
 	}
@@ -32,9 +29,7 @@ types = {
 		path = "game/map"
 		path_file = "climate.txt"
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "desc_$"
 		}
 	}
@@ -47,7 +42,6 @@ types = {
 		path = "game/map"
 		path_file = "region.txt"
 		localisation = {
-			## required
 			type = "$"
 			#these two are usually needed, but only if the regions are not sea regions
 			## optional
@@ -72,14 +66,11 @@ types = {
 	type[province_group] = {
 		path = "game/map"
 		path_file = "provincegroup.txt"
-
 		subtype[used] = {
 			## cardinality = 1..inf
 			scalar
 		}
-
 		localisation = {
-			## required
 			name = "$"
 		}
 	}

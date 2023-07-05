@@ -4,12 +4,9 @@ types = {
 		path = "game/common/ideas"
 		
 		localisation = {
-			## required
 			name = "$"
-			## required
 			bonus = "$_bonus"
 			subtype[country_idea] = {
-				## required
 				start = "$_start"
 			}
 		}
@@ -26,16 +23,13 @@ types = {
 		path = "game/common/ideas"
 		skip_root_key = any
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_desc"
 		}
 	}
 	type[native_advancement_group] = {
 		path = "game/common/native_advancements"
 		localisation = {
-			## required
 			name = "$"
 		}
 	}
@@ -44,9 +38,7 @@ types = {
 		path = "game/common/native_advancements"
 		skip_root_key = any
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_desc"
 		}
 	}
@@ -55,9 +47,7 @@ types = {
 		path = "game/common/custom_ideas"
 		skip_root_key = any
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_desc"
 		}
 	}

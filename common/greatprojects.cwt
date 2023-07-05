@@ -3,9 +3,7 @@ types = {
 	type[great_project] = {
 		path = "game/common/great_projects"
 		localisation = {
-			## required
 			name = "$"
-			## optional
 			desc = "$_desc"
 		}
 	}

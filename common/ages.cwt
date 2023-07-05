@@ -4,12 +4,9 @@ types = {
 		path = "game/common/ages"
 
 		localisation = {
-			## required
 			name = "$"
-			## required
 			short = "$_short"
-			## required
-			description = "$_desc"
+			desc = "$_desc"
 		}
 	}
 	type[game_age_ability] = {
@@ -18,7 +15,6 @@ types = {
 		skip_root_key = { any abilities }
 
 		localisation = {
-			## required
 			name = "$"
 		}
 	}

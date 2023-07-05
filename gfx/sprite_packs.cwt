@@ -3,7 +3,6 @@ types = {
 	type[sprite_pack] = {
 		path = "game/gfx/sprite_packs"
 		localisation = {
-			## required
 			name = "$"
 		}
 	}

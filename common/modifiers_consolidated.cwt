@@ -3,22 +3,19 @@
 types = {
 	type[event_modifier] = {
 		path = "game/common/event_modifiers"
-		
 		subtype[not_flag] = {
 			## cardinality = 1..inf
 			scalar = scalar
 		}
-		
 		localisation = {
 			subtype[not_flag] = {
 				name = "$"
-				description = "desc_$"
+				desc = "desc_$"
 			}
 		}
 	}
 	type[static_modifier] = { #todo: As far as I can tell, you cannot add to them.
 		path = "game/common/static_modifiers"
-		
 		localisation = {
 			## optional
 			name = "$"
@@ -26,18 +23,16 @@ types = {
 	}
 	type[triggered_modifier] = {
 		path = "game/common/triggered_modifiers"
-		
 		localisation = {
 			name = "$"
-			description = "desc_$"
+			desc = "desc_$"
 		}
 	}
 	type[province_triggered_modifier] = {
 		path = "game/common/province_triggered_modifiers"
-		
 		localisation = {
 			name = "$"
-			description = "desc_$"
+			desc = "desc_$"
 		}
 	}
 	#todo: Don't think you can add to them. Included for completeness

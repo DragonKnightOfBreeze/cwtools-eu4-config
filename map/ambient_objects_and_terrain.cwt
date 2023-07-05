@@ -16,7 +16,6 @@ types = {
 		path = "game/map"
 		path_file = "terrain.txt"
 		localisation = {
-			## required
 			type = "$"
 		}
 	}

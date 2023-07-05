@@ -6,19 +6,15 @@ types = {
 		name_from_file = yes
 		type_per_file = yes
 		path_strict = yes
-
-		localisation = {
-			## required
-			name = "$"
-			## required
-			description = "$DESCR"
-		}
-
 		subtype[land] = {
 			type = enum[land_unit_types]
 		}
 		subtype[naval] = {
 			type = enum[naval_unit_types]
+		}
+		localisation = {
+			name = "$"
+			desc = "$DESCR"
 		}
 	}
 }

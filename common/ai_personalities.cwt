@@ -5,12 +5,9 @@ types = {
 	type[ai_personality] = {
 		path = "game/common/ai_personalities"
 		localisation = {
-			## required
 			name = "$"
 			subtype[ai] = {
-				## required
 				desc = "$_desc"
-				## required
 				become = "an_$"
 			}
 		}

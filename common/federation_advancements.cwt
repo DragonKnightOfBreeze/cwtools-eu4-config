@@ -3,7 +3,6 @@ types = {
 	type[federation_advancements] = {
 		path = "game/common/federation_advancements"
 		localisation = {
-			## required
 			name = "$"
 		}
 	}

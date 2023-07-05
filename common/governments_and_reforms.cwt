@@ -13,7 +13,6 @@ types = {
 
 		localisation = {
 			subtype[normal] = {
-				## required
 				name = "$_name"
 			}
 		}
@@ -35,9 +34,8 @@ types = {
 			legacy_government = no
 		}
 		localisation = {
-			## required
 			name = "$"
-			description = "$_desc"
+			desc = "$_desc"
 		}
 	}
 	#necessary for localisations
@@ -50,8 +48,7 @@ types = {
 		}
 		localisation = {
 			subtype[new] = {
-				## required
-				description = "$_desc"
+				desc = "$_desc"
 			}
 		}
 	}
@@ -70,7 +67,6 @@ types = {
 	type[government_mechanic] = {
 		path = "game/common/government_mechanics"
 		localisation = {
-			## required
 			name = "ability_$"
 		}
 	}
@@ -87,16 +83,12 @@ types = {
 			development_scaled_monthly_growth = float[0.1..inf]
 		}
 		localisation = {
-			## required
 			name = "$"
-			## required
 			gain_modifier = "$_gain_modifier"
 			subtype[base_monthly_growth] = {
-				## required
 				modifier = "monthly_$"
 			}
 			subtype[development_scaled_monthly_growth] = {
-				## required
 				modifier = "monthly_$"
 			}
 		}
@@ -106,9 +98,7 @@ types = {
 		# Only look for things inside <mechanic> = { interactions = { HERE } }
 		skip_root_key = { any interactions }
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_desc"
 		}
 	}

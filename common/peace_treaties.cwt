@@ -4,14 +4,10 @@ types = {
 		path = "game/common/peace_treaties"
 
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_desc"
-			## required
-			CB_ALLOWED = "CB_ALLOWED_$"
-			## required
-			PEACE = "PEACE_$"
+			cb_allowed = "CB_ALLOWED_$"
+			peace = "PEACE_$"
 		}
 	}
 } 

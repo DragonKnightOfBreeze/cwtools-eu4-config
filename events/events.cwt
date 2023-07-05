@@ -33,7 +33,6 @@ types = {
 		subtype[unit] = {}
 
 		localisation = {
-			## primary
 			title = title
 		}
 	}

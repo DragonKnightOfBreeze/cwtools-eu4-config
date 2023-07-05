@@ -28,24 +28,19 @@ types = {
 		}
 		
 		localisation = {
-			## required
 			name = "$_title"
-			## required
 			desc = "$_desc"
 			subtype[member] = {
-				## required
 				member = "$_member"
 				## optional
 				member_desc = "desc_$_member"
 			}
 			subtype[emperor] = {
-				## required
 				emperor = "$_emperor"
 				## optional
 				emperor_desc = "desc_$_emperor"
 			}
 			subtype[elector] = {
-				## required
 				elector = "$_elector"
 				## optional
 				elector_desc = "desc_$_elector"
@@ -55,11 +50,9 @@ types = {
 				province = "$_province"
 			}
 			subtype[emperor_per_prince] = {
-				## required
 				emperor_per_prince = "$_emperor_per_prince"
 			}
 			subtype[elector_per_prince] = {
-				## required
 				elector_per_prince = "$_elector_per_prince"
 			}
 		}

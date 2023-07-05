@@ -3,12 +3,9 @@ types = {
 	type[ancestor_personalities] = {
 		path = "game/common/ancestor_personalities"
 		localisation = {
-			## required
 			name = "$"
 			subtype[ai] = {
-				## required
 				desc = "$_desc"
-				## required
 				become = "an_$"
 			}
 		}

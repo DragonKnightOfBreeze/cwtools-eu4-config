@@ -3,7 +3,6 @@ types = {
 	type[hegemon] = {
 		path = "game/common/hegemons"
 		localisation = {
-			## required
 			name = "$"
 		}
 	}

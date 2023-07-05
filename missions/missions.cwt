@@ -9,11 +9,8 @@ types = {
 		path = "game/missions"
 		skip_root_key = any
 		localisation = {
-			## required
 			## replace_scope = { root = country this = country }
-			## primary
 			name = "$_title"
-			## required
 			## replace_scope = { root = country this = country }
 			desc = "$_desc"
 		}

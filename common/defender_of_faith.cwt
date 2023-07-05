@@ -3,9 +3,7 @@ types = {
 	type[defender_faith] = {
 		path = "game/common/defender_of_faith"
 		localisation = {
-			## required
 			name = "$"
-			## required
 			desc = "$_DESC"
 		}
 	}
