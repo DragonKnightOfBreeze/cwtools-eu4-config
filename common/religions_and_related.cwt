@@ -79,7 +79,6 @@ types = {
 			name = "$"
 		}
 		images = {
-			## primary
 			map_icon = map_icon # <sprite>
 		}
 	}
