@@ -8,6 +8,15 @@ types = {
 			longform = "$_long_desc"
 			is_ours = "$_is_our"
 		}
+		images = {
+			## primary
+			## optional
+			sprite = sprite # <sprite>
+			## optional
+			diplomacy_overlord_sprite = diplomacy_overlord_sprite # <sprite>
+			## optional
+			diplomacy_subject_sprite = diplomacy_subject_sprite # <sprite>
+		}
 	}
 	type[subject_upgrades] = {
 		path = "game/common/subject_type_upgrades"
@@ -15,20 +24,20 @@ types = {
 }
 
 subject_type = {
+	### copy_from copies everything except count and is_potential_overlord
 	## cardinality = 0..1
-	###copy_from copies everything except count and is_potential_overlord
 	copy_from = <subject_type>
+	### count = x means it "counts as" x in some triggers.
 	## cardinality = 0..1
-	###count = x means it "counts as" x in some triggers.
 	count = <subject_type>
 
 	## cardinality = 0..1
 	sprite = <sprite>
+	### The one that the overlord sees
 	## cardinality = 0..1
-	###The one that the overlord sees
 	diplomacy_overlord_sprite = <sprite>
+	### The one that the subject sees
 	## cardinality = 0..1
-	###The one that the subject sees
 	diplomacy_subject_sprite = <sprite>
 
 	## cardinality = 0..1

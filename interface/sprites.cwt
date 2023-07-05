@@ -9,13 +9,22 @@ types = {
 		skip_root_key = spriteTypes
 		name_field = name # these are links that start with the GFX_ prefix in vanilla
 		severity = warning
+		images = {
+			## primary
+			texture = textureFile # filepath
+		}
 	}
 }
 
 #I just want to know the name. So the validation is obviously incomplete
 sprite = {
 	name = scalar
-
-	## cardinality = 0..inf
-	scalar = scalar
+	## file_extensions = { .dds .png .tga }
+	textureFile = filepath
+	## cardinality = 0..1
+	noOfFrames = int
+	## cardinality = 0..1
+	loadType = scalar
+	## cardinality = 0..1
+	clickSound = <sound>
 }

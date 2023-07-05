@@ -78,6 +78,10 @@ types = {
 		localisation = {
 			name = "$"
 		}
+		images = {
+			## primary
+			map_icon = map_icon # <sprite>
+		}
 	}
 	type[religious_reform_group] = {
 		path = "game/common/religious_reforms"
@@ -110,10 +114,14 @@ types = {
 				desc = "desc_$"
 			}
 		}
+		images = {
+			subtype[church_aspect] = {
+				## optional
+				sprite = sprite # <sprite>
+			}
+		}
 	}
 }
-
-
 
 religion_group = {
 	## cardinality = 0..1
@@ -780,7 +788,6 @@ religion_group = {
 	}
 }
 
-
 ## replace_scope = { root = country this = country }
 personal_deity = {
 
@@ -819,8 +826,6 @@ personal_deity = {
 	}
 }
 
-
-
 religion_propagation = {
 
 	## cardinality = 0..1
@@ -853,8 +858,6 @@ religion_propagation = {
 	}
 }
 
-
-
 religious_reform_group = {
 	## replace_scope = { root = country this = country }
 	trigger = {
@@ -880,7 +883,6 @@ religious_reform_group = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 }
-
 
 aspects_and_blessings = {
 	subtype[church_aspect] = {

@@ -72,6 +72,9 @@ types = {
 		localisation = {
 			name = "$"
 		}
+		images = {
+			marker_sprite = marker_sprite # <sprite>
+		}
 	}
 	type[edict] = {
 		path = "game/common/state_edicts"

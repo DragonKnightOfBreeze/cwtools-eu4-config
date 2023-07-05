@@ -24,6 +24,10 @@ types = {
 			name = "$"
 			desc = "$_desc"
 		}
+		images = {
+			## primary
+			sprite = sprite # <sprite>
+		}
 	}
 	type[trade_node_name] = {
 		path = "game/common/tradenodes"
@@ -41,6 +45,9 @@ types = {
 			name = "$"
 			desc = "$_desc"
 		}
+		images = {
+			button_gfx = button_gfx # <sprite>
+		}
 	}
 	type[prices] = {
 		path = "game/common/prices"
@@ -55,7 +62,6 @@ types = {
 		}
 	}
 }
-
 
 trade_good = {
 	## color_type = hsv
@@ -96,8 +102,6 @@ trade_good = {
 	}
 }
 
-
-
 trade_company = {
 	## color_type = rgb
 	color = {
@@ -121,9 +125,7 @@ trade_company = {
 	}
 }
 
-
 trade_company_investment = {
-
 	category = enum[trade_company_investment_types] #todo: verify how these are defined. Could conceivably be scalar
 
 	sprite = <sprite>

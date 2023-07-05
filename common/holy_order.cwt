@@ -5,6 +5,9 @@ types = {
 			name = "$"
 			desc = "$_desc"
 		}
+		images = {
+			icon = icon # <sprite>
+		}
 	}
 }
 
