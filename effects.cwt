@@ -24,6 +24,9 @@ alias[effect:export_to_variable] = {
 	who = scope[country]
 	## cardinality = 0..1
 	###Takes a country scope for country-level value and a province scope on province-level value
+	who = enum[country_tags]
+	## cardinality = 0..1
+	###Takes a country scope for country-level value and a province scope on province-level value
 	who = scope[province]
 	## cardinality = 0..1
 	with = scope[country] #for when you use "trust"
@@ -31,26 +34,48 @@ alias[effect:export_to_variable] = {
 
 ## scope = any
 alias[effect:multiply_variable] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value[variable]
-	## cardinality = 0..1
+}
+## scope = any
+alias[effect:multiply_variable] = {
+	which = value[variable]
 	value = float
+}
+## scope = any
+### Alternative without using which or value
+alias[effect:multiply_variable] = {
+	## cardinality = 1..2
+	value[variable] = float
 }
 
 ## scope = any
 alias[effect:divide_variable] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value[variable]
-	## cardinality = 0..1
+}
+## scope = any
+alias[effect:divide_variable] = {
+	which = value[variable]
 	value = float
+}
+## scope = any
+### Alternative without using which or value
+alias[effect:divide_variable] = {
+	## cardinality = 1..2
+	value[variable] = float
 }
 
 ## scope = any
 ### Paradox reports that which = is optional
 alias[effect:change_variable] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value_set[variable]
-	## cardinality = 0..1
+}
+## scope = any
+### Paradox reports that which = is optional
+alias[effect:change_variable] = {
+	which = value_set[variable]
 	value = float
 }
 ## scope = any
@@ -62,10 +87,19 @@ alias[effect:change_variable] = {
 
 ## scope = any
 alias[effect:subtract_variable] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value[variable]
-	## cardinality = 0..1
+}
+## scope = any
+alias[effect:subtract_variable] = {
+	which = value[variable]
 	value = float
+}
+## scope = any
+### Alternative without using which or value
+alias[effect:subtract_variable] = {
+	## cardinality = 1..2
+	value[variable] = float
 }
 
 ## scope = any
@@ -77,7 +111,12 @@ alias[effect:set_variable] = {
 	## cardinality = 0..1
 	value = value[variable]
 }
-
+## scope = any
+### Alternative without using which or value
+alias[effect:set_variable] = {
+	## cardinality = 1..2
+	value[variable] = float
+}
 
 
 ## scope = any
@@ -288,7 +327,7 @@ alias[effect:add_republican_tradition] = float
 
 ## scope = country
 ###Adds republican tradition to the current scope. Scales to the government's election cycle duration. No effect if not a government using republic.
-alias[effect:add_scaled_republican_tradition] = int
+alias[effect:add_scaled_republican_tradition] = float
 
 ## scope = country
 ###Adds devotion to the current scope. No effect if not a government using has_devotion.
@@ -328,7 +367,7 @@ alias[effect:change_government] = enum[reb_nativesponsor]
 
 ## scope = country
 ###Changes the government rank of the current scope. Default range is 1 to 3.
-alias[effect:set_government_rank] = int[1..3]
+alias[effect:set_government_rank] = int
 
 ## scope = country
 ###Changes the pool size of one of the power pools within a government mechanic.
@@ -516,7 +555,7 @@ alias[effect:add_fervor] = int
 
 ## scope = country
 ###Adds Karma to the current scope. No effect if the country does not hold a religion using uses_karma.
-alias[effect:add_karma] = int
+alias[effect:add_karma] = float
 
 ## scope = country
 ###Sets the Karma value for the current scope. No effect if the country does not hold a religion using uses_karma.
@@ -836,7 +875,7 @@ alias[effect:add_sailors] = float[-1.0..1.0]
 
 ## scope = country
 ###Adds manpower to the current scope, as a percentage of total yearly manpower. 1 is equal to 100% of total yearly manpower.
-alias[effect:add_yearly_manpower] = float[-10.0..15.0] # ming crisis uses 15
+alias[effect:add_yearly_manpower] = float
 
 ## scope = country
 ###Adds sailors to the current scope, as a percentage of total yearly sailors. 1 is equal to 100% of total yearly sailors.
@@ -878,6 +917,8 @@ alias[effect:create_admiral] = {
 	culture = enum[country_tags]
 	## cardinality = 0..1
 	name = localisation_synced
+	## cardinality = 0..1
+	female = bool
 }
 
 ## scope = country
@@ -917,7 +958,7 @@ alias[effect:create_explorer] = {
 	## cardinality = 0..1
 	name = localisation_synced
 	## cardinality = 0..1
-	female = yes
+	female = bool
 }
 
 ## scope = country
@@ -956,6 +997,8 @@ alias[effect:create_conquistador] = {
 	culture = enum[country_tags]
 	## cardinality = 0..1
 	name = localisation_synced
+	## cardinality = 0..1
+	female = bool
 }
 
 ## scope = country
@@ -1408,6 +1451,8 @@ alias[effect:create_subject] = {
 	## cardinality = 1..1
 	enum[who_or_subject] = scope[country]
 	enum[who_or_subject] = enum[country_tags]
+	## cardinality = 0..1
+	keep_liberty_desire = yes
 }
 
 ## scope = country
@@ -1585,7 +1630,7 @@ alias[effect:add_estate_influence_modifier] = {
 	estate = all
 	## cardinality = 0..1
 	desc = localisation
-	influence = int
+	influence = float
 	duration = int
 	## cardinality = 0..1
 	add = yes
@@ -1596,7 +1641,7 @@ alias[effect:add_estate_influence_modifier] = {
 ###Adds loyalty for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
 alias[effect:add_estate_loyalty] = {
 	estate = <estate>
-	loyalty = int
+	loyalty = float
 	## cardinality = 0..1
 	short = yes
 }
@@ -1604,7 +1649,7 @@ alias[effect:add_estate_loyalty] = {
 ###Adds loyalty for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
 alias[effect:add_estate_loyalty] = {
 	estate = enum[estate_all]
-	loyalty = int
+	loyalty = float
 	## cardinality = 0..1
 	short = yes
 }
@@ -1614,7 +1659,7 @@ alias[effect:add_estate_loyalty_modifier] = {
 	estate = <estate>
 	estate = all
 	desc = localisation
-	loyalty = int
+	loyalty = float
 	duration = int
 }
 
@@ -1810,18 +1855,18 @@ alias[effect:define_leader_to_ruler] = {
 	## cardinality = 0..1
 	claim = int[0..100]
 	## cardinality = 0..1
-	adm = int[0..6]
+	adm = int
 	## cardinality = 0..1
-	dip = int[0..6]
+	dip = int
 	## cardinality = 0..1
-	mil = int[0..6]
+	mil = int
 	## cardinality = 0..1
 	###Makes the ruler skill roll fixed to the defined minimums.
 	fixed = yes
 }
 
 ## scope = country
-###Creates the defined ruler for the current scope. The culture and religion attributes can utilise Event Scope Values. The name parameter can accept a saved name variable, see set_saved_name for more context.
+###Creates the defined ruler for the current scope. The culture and religion attributes can utilise Event Scope Values. The name parameter can accept a saved name variable, see set_saved_name for more context.  If dynasty = historic_dynasty is used the game will pick one weighted by how many rulers a family has had.
 alias[effect:define_ruler] = {
 #	## cardinality = 0..1
 #	name = localisation_synced
@@ -1840,6 +1885,8 @@ alias[effect:define_ruler] = {
 	## cardinality = 0..1
 	dynasty = original_dynasty
 	## cardinality = 0..1
+	dynasty = historic_dynasty
+	## cardinality = 0..1
 	min_age = int
 	## cardinality = 0..1
 	max_age = int
@@ -1848,17 +1895,17 @@ alias[effect:define_ruler] = {
 	## cardinality = 0..1
 	claim = int[0..100]
 	## cardinality = 0..1
-	adm = int[0..6]
+	adm = int
 	## cardinality = 0..1
-	dip = int[0..6]
+	dip = int
 	## cardinality = 0..1
-	mil = int[0..6]
+	mil = int
 	## cardinality = 0..1
-	max_random_adm = int[0..6]
+	max_random_adm = int
 	## cardinality = 0..1
-	max_random_dip = int[0..6]
+	max_random_dip = int
 	## cardinality = 0..1
-	max_random_mil = int[0..6]
+	max_random_mil = int
 	## cardinality = 0..1
 	###Hides the skill values for this ruler.
 	hide_skills = yes
@@ -2017,11 +2064,11 @@ alias[effect:define_consort] = {
 	## cardinality = 0..1
 	claim = int[0..100]
 	## cardinality = 0..1
-	adm = int[0..6]
+	adm = int
 	## cardinality = 0..1
-	dip = int[0..6]
+	dip = int
 	## cardinality = 0..1
-	mil = int[0..6]
+	mil = int
 	## cardinality = 0..1
 	###Hides the skill values for this ruler.
 	hide_skills = yes
@@ -2209,17 +2256,17 @@ alias[effect:define_heir] = {
 	## cardinality = 0..1
 	claim = int[0..100]
 	## cardinality = 0..1
-	adm = int[0..6]
+	adm = int
 	## cardinality = 0..1
-	dip = int[0..6]
+	dip = int
 	## cardinality = 0..1
-	mil = int[0..6]
+	mil = int
 	## cardinality = 0..1
-	max_random_adm = int[0..6]
+	max_random_adm = int
 	## cardinality = 0..1
-	max_random_dip = int[0..6]
+	max_random_dip = int
 	## cardinality = 0..1
-	max_random_mil = int[0..6]
+	max_random_mil = int
 	## cardinality = 0..1
 	###Hides the skill values for this ruler.
 	hide_skills = yes
@@ -2691,7 +2738,7 @@ alias[effect:spawn_rebels] = {
 	## cardinality = 0..1
 	type = religious_rebels
 	#should be 0.5..6 but parsing floats is bugged
-	size = float[0..6]
+	size = float
 	## cardinality = 0..1
 	culture = <culture>
 	## cardinality = 0..1
@@ -3160,7 +3207,7 @@ alias[effect:add_to_trade_company] = enum[country_tags]
 alias[effect:add_to_trade_company] = ---
 
 ## scope = country
-alias[effect:add_years_of_manpower_scaled_to_seats] = int
+alias[effect:add_years_of_manpower_scaled_to_seats] = float
 
 ## scope = country
 alias[effect:add_years_of_sailors_scaled_to_seats] = int
@@ -3469,6 +3516,12 @@ alias[effect:add_great_project_tier] = {
 	type = <great_project>
 	tier = int
 }
+
+## scope = province
+alias[effect:add_canal] = <great_project.canal>
+## scope = province
+alias[effect:remove_canal] = <great_project.canal>
+
 ## scope = province
 ###Settles a tribal province belonging to the owner of the ROOT province scope
 alias[effect:settle_province] = enum[country_tags]
@@ -3478,7 +3531,7 @@ alias[effect:settle_province] = scope[country]
 
 ## scope = country
 ###Changes the government rank of the current scope. Default range is 1 to 3.
-alias[effect:set_government_rank_force] = int[1..3]
+alias[effect:set_government_rank_force] = int
 
 ## scope = country
 ###Disband Federation.
@@ -3907,7 +3960,7 @@ alias[effect:add_random_development] = int
 alias[effect:add_rebel_progress] = {
 	value = int
 	## cardinality = 0..1
-	type = <rebel_type>
+	rebel_type = <rebel_type>
 }
 
 ## scope = country
@@ -4257,3 +4310,19 @@ alias[effect:exile_consort_as] = value_set[exiled_consort]
 ###Makes an exiled consort the consort of the current scope.
 ## severity = warning
 alias[effect:set_consort] = value[exiled_consort]
+
+## scope = province
+###Creates a Banner Infantry in the scoped province, for the defined scope
+alias[effect:banner_infantry] = scope[country]
+
+## scope = province
+###Creates a Banner Infantry in the scoped province, for the defined scope
+alias[effect:banner_infantry] = enum[country_tags]
+
+## scope = province
+###Creates a Banner Cavalry in the scoped province, for the defined scope
+alias[effect:banner_cavalry] = scope[country]
+
+## scope = province
+###Creates a Banner Cavalry in the scoped province, for the defined scope
+alias[effect:banner_cavalry] = enum[country_tags]
