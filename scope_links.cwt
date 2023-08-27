@@ -4,6 +4,20 @@
 alias[trigger:scope_field] = { alias_name[trigger] = alias_match_left[trigger] }
 alias[effect:scope_field] = { alias_name[effect] = alias_match_left[effect] }
 
+### An inverted trigger, functionally the same as NOR
+alias[trigger:NOT] = {
+	# ## cardinality = 1..1
+	alias_name[trigger] = alias_match_left[trigger]
+}
+### An inverted OR trigger
+alias[trigger:NOR] = { alias_name[trigger] = alias_match_left[trigger] }
+### An inverted AND trigger
+alias[trigger:NAND] = { alias_name[trigger] = alias_match_left[trigger] }
+### all inside trigger must be true
+alias[trigger:AND] = { alias_name[trigger] = alias_match_left[trigger] }
+### At least one entry inside the trigger must be true
+alias[trigger:OR] = { alias_name[trigger] = alias_match_left[trigger] }
+
 #Complicated ones (separated from the rest for testing reasons)
 
 ## scope = { country province }
@@ -990,7 +1004,6 @@ alias[effect:random_trade_node_member_province] = {
 }
 
 
-
 ## push_scope = country
 ## scope = unit
 ###Returns the unit's owner country scope.
@@ -998,49 +1011,6 @@ alias[effect:unit_owner] = {
 	## cardinality = 0..1
 	alias_name[effect] = alias_match_left[effect]
 }
-
-
-
-
-#Triggers
-#These are not required as they are covered by the `scope_field` rule
-# ## scope = any
-# ###This is "NOR" rather than "NAND"
-# alias[trigger:NOT] = {
-# 	alias_name[trigger] = alias_match_left[trigger]
-# }
-
-# ## scope = any
-# alias[trigger:OR] = {
-# 	alias_name[trigger] = alias_match_left[trigger]
-# }
-
-# ## scope = any
-# alias[trigger:AND] = {
-# 	alias_name[trigger] = alias_match_left[trigger]
-# }
-
-# ## scope = any
-# alias[trigger:root] = {
-# 	alias_name[trigger] = alias_match_left[trigger]
-# }
-
-# ## scope = any
-# alias[trigger:prev] = {
-# 	alias_name[trigger] = alias_match_left[trigger]
-# }
-
-# ## scope = any
-# alias[trigger:from] = {
-# 	alias_name[trigger] = alias_match_left[trigger]
-# }
-
-# ## scope = any
-# alias[trigger:this] = {
-# 	alias_name[trigger] = alias_match_left[trigger]
-# }
-
-
 
 ## push_scope = country
 ## scope = unit
