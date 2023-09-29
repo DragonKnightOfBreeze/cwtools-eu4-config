@@ -405,7 +405,7 @@ alias[effect:unfreeze_government_power] = {
 
 ## scope = country
 ###Changes the pool size of one of the power pools within a government mechanic, scaled to number of seats in parliament.
-alias[effect:add_government_power_scaled_to_eats] = {
+alias[effect:add_government_power_scaled_to_seats] = {
 	###Which government mechanic to add power to.
 	mechanic_type = <government_mechanic>
 	power_type = <government_mechanic_power>
@@ -1053,18 +1053,6 @@ alias[effect:kill_leader] = {
 	type = random
 	type = localisation_synced #value[leader_name]
 }
-
-## scope = { country province }
-###In country scope, kills a leader held by the current scope matching the type used. Format: kill_leader = { type = general/random/name }. In province scope, kills a leader in the current province scope if they match the type used. Format: kill_leader = general/random/name Only works if the leader is assigned to a unit that is stationed in the current province.
-alias[effect:kill_leader] = enum[military_leader_types]
-
-## scope = { country province }
-###In country scope, kills a leader held by the current scope matching the type used. Format: kill_leader = { type = general/random/name }. In province scope, kills a leader in the current province scope if they match the type used. Format: kill_leader = general/random/name Only works if the leader is assigned to a unit that is stationed in the current province.
-alias[effect:kill_leader] = random
-
-## scope = { country province }
-###In country scope, kills a leader held by the current scope matching the type used. Format: kill_leader = { type = general/random/name }. In province scope, kills a leader in the current province scope if they match the type used. Format: kill_leader = general/random/name Only works if the leader is assigned to a unit that is stationed in the current province.
-alias[effect:kill_leader] = localisation_synced #value[leader_name]
 
 ## scope = country
 ###Creates an admiral with the defined attributes for the current scope. Leader traits can be found in /Europa Universalis IV/common/leader_personalities/*.txt. Siege improves Blockade Efficiency for admirals. The name parameter can accept a saved name variable, see set_saved_name for more context.

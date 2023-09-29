@@ -84,12 +84,10 @@ types = {
 		# Only look for things inside <mechanic> = { powers = { HERE } }
 		skip_root_key = { any powers }
 		subtype[base_monthly_growth] = {
-			base_monthly_growth = float[-inf..-0.1]
-			base_monthly_growth = float[0.1..inf]
+			base_monthly_growth = float
 		}
 		subtype[development_scaled_monthly_growth] = {
-			development_scaled_monthly_growth = float[-inf..-0.1]
-			development_scaled_monthly_growth = float[0.1..inf]
+			development_scaled_monthly_growth = float
 		}
 		localisation = {
 			name = "$"
@@ -522,11 +520,6 @@ government_reform = {
 
 		## cardinality = 0..1
 		government_abilities = {
-			enum[government_mechanics]
-		}
-
-		## cardinality = 0..1
-		government_abilities = {
 			## cardinality = 1..inf
 			<government_mechanic>
 		}
@@ -576,10 +569,6 @@ government_reform = {
 			has_janissaries = bool
 			## cardinality = 0..1
 			claim_states = bool
-			## cardinality = 0..1
-			government_abilities = {
-				enum[government_mechanics]
-			}
 			## cardinality = 0..1
 			government_abilities = {
 				## cardinality = 1..inf
