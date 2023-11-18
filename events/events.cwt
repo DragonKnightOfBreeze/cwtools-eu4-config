@@ -27,10 +27,6 @@ types = {
 		## type_key_filter = province_event
 		## push_scope = province
 		subtype[province] = {}
-		## group = event_type
-		## type_key_filter = unit_event
-		## push_scope = unit
-		subtype[unit] = {}
 
 		localisation = {
 			subtype[!hidden] = {
@@ -157,7 +153,7 @@ event = {
 	option = {
 		subtype[hidden] = {
 			## cardinality = 0..1
-			name = localisation
+			name = scalar
 		}
 		subtype[!hidden] = {
 			## severity = warning

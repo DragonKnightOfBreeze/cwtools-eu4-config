@@ -232,9 +232,11 @@ estate_privilege = {
 	## cardinality = 0..inf
 	###Modifier that are applied if the specified conditions are true.
 	conditional_modifier = {
+		## cardinality = 0..1
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..inf
 		modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
@@ -245,6 +247,8 @@ estate_privilege = {
 	## cardinality = 0..inf
 	###Modifier that is applied if specified conditions are true, with its effect scaling on the influence of the estate
 	influence_scaled_conditional_modifier = {
+		## cardinality = 0..1
+		###Conditions under which this modifier will be active, if empty it will be always
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
@@ -304,6 +308,15 @@ estate_privilege = {
 	ai_will_do = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	additional_description = {
+		## cardinality = 0..1
+		cossacks_regiment
+		## cardinality = 0..1
+		rajput_regiment
+		## cardinality = 0..inf
+		scalar
 	}
 }
 

@@ -259,6 +259,7 @@ government_mechanic = {
 			## cardinality = 0..1
 			## replace_scope = { root = country this = country }
 			ai_chance = {
+				## cardinality = 0..1
 				factor = float[0..10000]
 				alias_name[modifier_rule] = alias_match_left[modifier_rule]
 			}
@@ -348,6 +349,7 @@ government_reform = {
 		has_cultural_union = bool
 		can_remove_idea_group = bool
 		mercs_do_not_cost_army_professionalism = bool
+		is_eligible_for_hre_emperor = bool
 	}
 
 
@@ -593,6 +595,8 @@ government_reform = {
 			duration = int
 			## cardinality = 0..1
 			has_term_election = bool
+			## cardinality = 0..1
+			is_eligible_for_hre_emperor = no
 
 			## cardinality = 0..1
 			factions = {
@@ -731,6 +735,9 @@ government_reform = {
 		post_removed_effect = {
 			alias_name[effect] = alias_match_left[effect]
 		}
+
+		## cardinality = 0..1
+		is_eligible_for_hre_emperor = bool
 	}
 }
 
