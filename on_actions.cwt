@@ -1,819 +1,819 @@
 on_actions = {
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_startup = {}
+	on_startup
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_religion_change = {}
+	on_religion_change
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_secondary_religion_change = {}
+	on_secondary_religion_change
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_colonial_liberation = {}
+	on_colonial_liberation
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_colonial_reintegration = {}
+	on_colonial_reintegration
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_peace_actor = {}
+	on_peace_actor
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_peace_recipient = {}
+	on_peace_recipient
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_new_monarch = {}
+	on_new_monarch
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_new_consort = {}
+	on_new_consort
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_monarch_death = {}
+	on_monarch_death
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_regent = {}
+	on_regent
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_new_term_election = {}
+	on_new_term_election
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_death_election = {}
+	on_death_election
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_death_foreign_slave_ruler = {}
+	on_death_foreign_slave_ruler
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_replace_governor = {}
+	on_replace_governor
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_bankruptcy = {}
+	on_bankruptcy
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_diplomatic_annex = {}
+	on_diplomatic_annex
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_heir_death = {}
+	on_heir_death
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_queen_death = {}
+	on_queen_death
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_new_heir = {}
+	on_new_heir
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_weak_heir_claim = {}
+	on_weak_heir_claim
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_heir_needed_theocracy = {}
+	on_heir_needed_theocracy
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_government_change = {}
+	on_government_change
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_native_change_government = {}
+	on_native_change_government
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_overextension_pulse = {}
+	on_overextension_pulse
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_bi_yearly_pulse = {}
+	on_bi_yearly_pulse
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_bi_yearly_pulse_2 = {}
+	on_bi_yearly_pulse_2
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_bi_yearly_pulse_3 = {}
+	on_bi_yearly_pulse_3
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_bi_yearly_pulse_4 = {}
+	on_bi_yearly_pulse_4
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_thri_yearly_pulse = {}
+	on_thri_yearly_pulse
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_thri_yearly_pulse_2 = {}
+	on_thri_yearly_pulse_2
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_thri_yearly_pulse_3 = {}
+	on_thri_yearly_pulse_3
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_thri_yearly_pulse_4 = {}
+	on_thri_yearly_pulse_4
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_four_year_pulse = {}
+	on_four_year_pulse
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_four_year_pulse_2 = {}
+	on_four_year_pulse_2
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_four_year_pulse_3 = {}
+	on_four_year_pulse_3
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_four_year_pulse_4 = {}
+	on_four_year_pulse_4
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_five_year_pulse = {}
+	on_five_year_pulse
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_five_year_pulse_2 = {}
+	on_five_year_pulse_2
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_five_year_pulse_3 = {}
+	on_five_year_pulse_3
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_five_year_pulse_4 = {}
+	on_five_year_pulse_4
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_parliament_debate_failed = {}
+	on_parliament_debate_failed
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_parliament_debate_succeeded = {}
+	on_parliament_debate_succeeded
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_harmonized_religiongroup = {}
+	on_harmonized_religiongroup
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_gain_great_power_status = {}
+	on_gain_great_power_status
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_lose_great_power_status = {}
+	on_lose_great_power_status
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_leader_recruited = {}
+	on_leader_recruited
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_general_recruited = {}
+	on_general_recruited
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_admiral_recruited = {}
+	on_admiral_recruited
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_conquistador_recruited = {}
+	on_conquistador_recruited
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_explorer_recruited = {}
+	on_explorer_recruited
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_russian_streltsy = {}
+	on_russian_streltsy
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_russian_sudebnik = {}
+	on_russian_sudebnik
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_russian_oprichnina = {}
+	on_russian_oprichnina
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_fetishist_cult_change = {}
+	on_fetishist_cult_change
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_lock_hre_religion = {}
+	on_lock_hre_religion
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_change_hre_religion = {}
+	on_change_hre_religion
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_death_has_harem = {}
+	on_death_has_harem
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_select_heir_from_harem = {}
+	on_select_heir_from_harem
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_successive_emperor = {}
+	on_successive_emperor
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_hre_religion_white_peace = {}
+	on_hre_religion_white_peace
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_dismantle_revolution = {}
+	on_dismantle_revolution
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_buy_religious_reform = {}
+	on_buy_religious_reform
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_circumnavigation = {}
+	on_circumnavigation
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_become_free_city = {}
+	on_become_free_city
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_remove_free_city = {}
+	on_remove_free_city
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_released_hre_member = {}
+	on_released_hre_member
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_hre_member_false_religion = {}
+	on_hre_member_false_religion
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_hre_member_true_religion = {}
+	on_hre_member_true_religion
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_hre_released_vassal = {}
+	on_hre_released_vassal
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_hre_transfered_vassal = {}
+	on_hre_transfered_vassal
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_enforce_rebel_demands = {}
+	on_enforce_rebel_demands
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_war_won = {}
+	on_war_won
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_war_lost = {}
+	on_war_lost
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_battle_won_country = {}
+	on_battle_won_country
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_battle_lost_country = {}
+	on_battle_lost_country
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_annexed = {}
+	on_annexed
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_chinese_empire_dismantled = {}
+	on_chinese_empire_dismantled
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_mandate_of_heaven_gained = {}
+	on_mandate_of_heaven_gained
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_mandate_of_heaven_lost = {}
+	on_mandate_of_heaven_lost
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_dependency_gained = {}
+	on_dependency_gained
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_dependency_lost = {}
+	on_dependency_lost
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_create_vassal = {}
+	on_create_vassal
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_accept_tribute = {}
+	on_accept_tribute
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_refuse_tribute = {}
+	on_refuse_tribute
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_integrate = {}
+	on_integrate
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_hre_defense = {}
+	on_hre_defense
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_hre_non_defense = {}
+	on_hre_non_defense
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_hre_wins_defensive_war = {}
+	on_hre_wins_defensive_war
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_hre_member_annexed = {}
+	on_hre_member_annexed
 
 	## replace_scopes = { this = country root = country from = province }
 	## event_type = country
-	on_siege_won_country = {}
+	on_siege_won_country
 
 	## replace_scopes = { this = country root = country from = province }
 	## event_type = country
-	on_siege_lost_country = {}
+	on_siege_lost_country
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_battle_won_province = {}
+	on_battle_won_province
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_battle_lost_province = {}
+	on_battle_lost_province
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_abandon_colony = {}
+	on_abandon_colony
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_colonist_boosting_colony = {}
+	on_colonist_boosting_colony
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_added_to_trade_company = {}
+	on_added_to_trade_company
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_removed_from_company = {}
+	on_removed_from_company
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_company_formed = {}
+	on_company_formed
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_company_disolved = {}
+	on_company_disolved
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_siege_won_province = {}
+	on_siege_won_province
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_siege_lost_province = {}
+	on_siege_lost_province
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_company_chartered = {}
+	on_company_chartered
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_convert_by_trade_policy = {}
+	on_convert_by_trade_policy
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_province_owner_change = {}
+	on_province_owner_change
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_regiment_recruited = {}
+	on_regiment_recruited
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_mercenary_recruited = {}
+	on_mercenary_recruited
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_conquistador_native = {}
+	on_conquistador_native
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_explore_coast = {}
+	on_explore_coast
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_conquistador_empty = {}
+	on_conquistador_empty
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_janissaries_raised = {}
+	on_janissaries_raised
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_reform_enacted = {}
+	on_reform_enacted
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_reform_changed = {}
+	on_reform_changed
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_trade_company_investment = {}
+	on_trade_company_investment
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_center_of_trade_upgrade = {}
+	on_center_of_trade_upgrade
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_center_of_trade_downgrade = {}
+	on_center_of_trade_downgrade
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_culture_promoted = {}
+	on_culture_promoted
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_culture_demoted = {}
+	on_culture_demoted
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_primary_culture_changed = {}
+	on_primary_culture_changed
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_adm_development = {}
+	on_adm_development
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_dip_development = {}
+	on_dip_development
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_mil_development = {}
+	on_mil_development
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_province_religion_converted = {}
+	on_province_religion_converted
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_province_culture_converted = {}
+	on_province_culture_converted
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_add_pasha = {}
+	on_add_pasha
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_remove_pasha = {}
+	on_remove_pasha
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_consecrate_patriarch = {}
+	on_consecrate_patriarch
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_revoke_estate_land_ai_post = {}
+	on_revoke_estate_land_ai_post
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_estate_removed = {}
+	on_estate_removed
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_revoke_estate_land_post = {}
+	on_revoke_estate_land_post
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_revoke_estate_land_ai = {}
+	on_revoke_estate_land_ai
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_revoke_estate_land = {}
+	on_revoke_estate_land
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_grant_estate_land = {}
+	on_grant_estate_land
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_colonial_pulse = {}
+	on_colonial_pulse
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_siberian_pulse = {}
+	on_siberian_pulse
 
 	## replace_scopes = { this = province root = province }
 	## event_type = province
-	on_hre_province_reconquest = {}
+	on_hre_province_reconquest
 
 	## replace_scopes = { this = unit root = unit }
 	## event_type = unit_event
-	on_battle_won_unit = {} # no random_events or events in vanilla cwt file
+	on_battle_won_unit # no random_events or events in vanilla cwt file
 
 	## replace_scopes = { this = unit root = unit }
 	## event_type = unit_event
-	on_battle_lost_unit = {} # no random_events or events in vanilla cwt file
+	on_battle_lost_unit # no random_events or events in vanilla cwt file
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_holy_order_established = {}
+	on_holy_order_established
 
 	## replace_scopes = { this = province root = province from = province }
 	## event_type = province
-	on_minority_expelled = {}
+	on_minority_expelled
 
 	## replace_scopes = { this = country root = country from = province }
 	## event_type = country
-	on_raid_coast = {}
+	on_raid_coast
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_flagship_captured = {}
+	on_flagship_captured
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_flagship_destroyed = {}
+	on_flagship_destroyed
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_country_released = {}
+	on_country_released
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_trade_good_changed = {}
+	on_trade_good_changed
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_loan_repaid = {}
+	on_loan_repaid
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_rebels_break_country = {}
+	on_rebels_break_country
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_pre_adm_advisor_fired = {}
+	on_pre_adm_advisor_fired
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_pre_dip_advisor_fired = {}
+	on_pre_dip_advisor_fired
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_pre_mil_advisor_fired = {}
+	on_pre_mil_advisor_fired
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_post_adm_advisor_fired = {}
+	on_post_adm_advisor_fired
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_post_dip_advisor_fired = {}
+	on_post_dip_advisor_fired
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_post_mil_advisor_fired = {}
+	on_post_mil_advisor_fired
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_embrace_revolution = {}
+	on_embrace_revolution
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_emperor_elected = {}
+	on_emperor_elected
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_create_client_state = {}
+	on_create_client_state
 
 	## replace_scopes = { this = country root = country }
 	## event_type = country
-	on_golden_bull_enacted = {}
+	on_golden_bull_enacted
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_change_revolution_target = {}
+	on_change_revolution_target
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_conquest = {}
+	on_conquest
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_country_creation = {}
+	on_country_creation
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_federation_leader_change = {}
+	on_federation_leader_change
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_pillaged_capital = {}
+	on_pillaged_capital
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_transfer_development = {}
+	on_transfer_development
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_colonial_type_change = {}
+	on_colonial_type_change
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_estate_led_regency = {}
+	on_estate_led_regency
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_estate_led_regency_surpassed = {}
+	on_estate_led_regency_surpassed
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_extended_regency = {}
+	on_extended_regency
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_extend_regency = {}
+	on_extend_regency
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_main_war_won = {}
+	on_main_war_won
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_separate_war_won = {}
+	on_separate_war_won
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_adm_exploited = {}
+	on_adm_exploited
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_dip_exploited = {}
+	on_dip_exploited
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_mil_exploited = {}
+	on_mil_exploited
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_defender_of_faith_claim = {}
+	on_defender_of_faith_claim
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_defender_of_faith_loss = {}
+	on_defender_of_faith_loss
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_institution_embracement = {}
+	on_institution_embracement
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_centralized_state = {}
+	on_centralized_state
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_force_conversion = {}
+	on_force_conversion
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_defender_of_faith_claim = {}
+	on_defender_of_faith_claim
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_raze = {}
+	on_raze
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_concentrate_development = {}
+	on_concentrate_development
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_capital_moved = {}
+	on_capital_moved
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_province_religion_changed = {}
+	on_province_religion_changed
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_province_culture_changed = {}
+	on_province_culture_changed
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_colony_finished = {}
+	on_colony_finished
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_colony_established = {}
+	on_colony_established
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_colonial_nation_established = {}
+	on_colonial_nation_established
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_advisor_hired = {}
+	on_advisor_hired
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_adm_advisor_hired = {}
+	on_adm_advisor_hired
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_dip_advisor_hired = {}
+	on_dip_advisor_hired
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_mil_advisor_hired = {}
+	on_mil_advisor_hired
 
 	## replace_scopes = { this = province root = province from = country }
 	## event_type = province
-	on_core = {}
+	on_core
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_adm_tech_taken = {}
+	on_adm_tech_taken
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_dip_tech_taken = {}
+	on_dip_tech_taken
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_mil_tech_taken = {}
+	on_mil_tech_taken
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_barrage = {}
+	on_barrage
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_naval_barrage = {}
+	on_naval_barrage
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_scorch_earth = {}
+	on_scorch_earth
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_parliament_debate_reset = {}
+	on_parliament_debate_reset
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_parliament_seat_given = {}
+	on_parliament_seat_given
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_parliament_seat_lost = {}
+	on_parliament_seat_lost
 
 	###ROOT is country that sent the request to ally, FROM is country that accepted it
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_alliance_broken = {}
+	on_alliance_broken
 
 	###ROOT is country that sent the request to marry, FROM is country that accepted it
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_royal_marriage_broken = {}
+	on_royal_marriage_broken
 
 	## replace_scopes = { this = country root = country from = country }
 	## event_type = country
-	on_mandate_reform_passed = {}
+	on_mandate_reform_passed
 }
