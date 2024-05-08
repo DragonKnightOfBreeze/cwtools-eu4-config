@@ -250,7 +250,7 @@ province_history = {
 			native_ferocity = float[0..10]
 			## cardinality = 0..1
 			native_hostileness = float[0..10]
-			
+
 			## cardinality = 0..1
 			tribal_owner = enum[country_tags]
 			## cardinality = 0..1
@@ -388,7 +388,7 @@ country_history = {
 		###Cannot move capital away from this province & no power cost to move to it
 		fixed_capital = <province_id>
 		## cardinality = 0..1
-		national_focus = enum[power_categories]
+		national_focus = enum[power_category]
 		## cardinality = 0..1
 		religious_school = <religious_school>
 		## cardinality = 0..inf
@@ -400,9 +400,9 @@ country_history = {
 		## cardinality = 0..1
 		historical_council = enum[council_positions]
 		## cardinality = 0..1
-		federation = { 
+		federation = {
 			name = scalar
-			members = { 
+			members = {
 				## cardinality = 1..inf
 				enum[country_tags]
 			}
@@ -414,7 +414,7 @@ country_history = {
 		subtype[sunni] = {
 			religious_school = <religious_school>
 		}
-		
+
 
 		## cardinality = 0..inf
 		date_field = {

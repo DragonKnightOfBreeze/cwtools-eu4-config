@@ -28,7 +28,7 @@ enums = {
 		battle
 		capture
 	}
-	enum[power_categories] = {
+	enum[power_category] = {
 		ADM
 		DIP
 		MIL

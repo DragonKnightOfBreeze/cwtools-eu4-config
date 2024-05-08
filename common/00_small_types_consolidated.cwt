@@ -147,7 +147,7 @@ achievement = {
 }
 
 faction = {
-	monarch_power = enum[power_categories]
+	monarch_power = enum[power_category]
 	always = yes
 
 	## cardinality = 0..1
@@ -326,7 +326,7 @@ naval_doctrine = {
 
 
 policy = {
-	monarch_power = enum[power_categories]
+	monarch_power = enum[power_category]
 
 	## replace_scope = { this = country root = country }
 	potential = {

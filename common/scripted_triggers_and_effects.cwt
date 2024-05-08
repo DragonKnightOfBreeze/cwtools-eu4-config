@@ -69,7 +69,7 @@ alias[trigger:has_completed_idea_group_of_category] = {
 ## scope = country
 alias[trigger:num_of_completed_idea_groups_by_category] = {
 	## cardinality = 0..1
-	type = enum[power_categories]
+	type = enum[power_category]
 	## cardinality = 0..1
 	adm_ideas = bool
 	## cardinality = 0..1
@@ -93,7 +93,7 @@ alias[trigger:has_any_active_incomplete_idea_group_of_category] = {
 ###Kills a hired advisor of a monarch power type for the current scope. Displays the advisor death message box when used.
 alias[effect:kill_advisor_by_category_effect] = {
 	## cardinality 1..3
-	enum[power_categories] = yes
+	enum[power_category] = yes
 }
 
 ## scope = country
@@ -1854,7 +1854,7 @@ alias[effect:issue_effect_scaling_with_estate_influence] = {
 }
 
 enums = {
-	enum[scaling_with_estate_influence_options] = { 
+	enum[scaling_with_estate_influence_options] = {
 		"add_adm_power = 10"
 		"add_adm_power = 100"
 		"add_adm_power = 25"
@@ -1935,7 +1935,7 @@ enums = {
 		"create_general = { tradition = 30 }"
 		"create_general = { tradition = 45 }"
 		"create_general = { tradition = 60 }"
-		"create_general = { tradition = 75 }" 
+		"create_general = { tradition = 75 }"
 		"
 			add_legitimacy = 5
 			add_heir_claim = 5
@@ -2002,7 +2002,7 @@ enums = {
 				type = colonial_governor
 				skill = 3
 			}
-			"		
+			"
 		"
 			define_advisor = {
 				type = colonial_governor
@@ -2024,7 +2024,7 @@ enums = {
 				cost_multiplier = 0.25
 			}
 			"
-		"	
+		"
 			define_advisor = {
 				type = colonial_governor
 				skill = 3
@@ -2227,7 +2227,7 @@ alias[effect:country_event_with_effect_insight] = {
 ## scope = country
 ### CW Tools ignores items in quotes
 alias[effect:for_every_level_of_advisor_do] = {
-	type = enum[power_categories]
+	type = enum[power_category]
 	effect = scalar
 }
 

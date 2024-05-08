@@ -63,7 +63,7 @@ idea_group = {
 			factor = float
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
-		category = enum[power_categories]
+		category = enum[power_category]
 	}
 
 
@@ -126,7 +126,7 @@ idea_group = {
 
 #todo: not sure if these are referred to anywhere. Maybe they count as ideas.
 native_advancement_group = {
-	category = enum[power_categories]
+	category = enum[power_category]
 
 	## cardinality = 5..5
 	<native_advancement> = {
@@ -150,7 +150,7 @@ customideas = {
 			factor = float
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
-		category = enum[power_categories]
+		category = enum[power_category]
 	}
 	## cardinality = 0..7
 	alias_name[modifier] = alias_match_left[modifier]

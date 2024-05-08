@@ -865,7 +865,7 @@ alias[trigger:employed_advisor] = {
 	## cardinality = 0..1
 	type = <advisor_type>
 	## cardinality = 0..1
-	category = enum[power_categories]
+	category = enum[power_category]
 	## cardinality = 0..1
 	skill = int[0..5]
 	## cardinality = 0..1
@@ -2874,7 +2874,7 @@ alias[trigger:nationalism] = int
 
 ## scope = country
 ###Returns true if country has set the national focus to X.
-alias[trigger:national_focus] = enum[power_categories]
+alias[trigger:national_focus] = enum[power_category]
 
 ## scope = country
 ###Returns true if at least X points were used when creating the custom nation.

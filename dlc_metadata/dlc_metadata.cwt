@@ -1,6 +1,6 @@
 
 types = {
-	type[dlc_categories] = {
+	type[dlc_category] = {
 		path = "game/dlc_metadata/dlc_info"
 		skip_root_key = categories
 	}
@@ -18,7 +18,7 @@ types = {
 dlc_info = {
 	name = localisation_synced
 	id = int
-	category = <dlc_categories>
+	category = <dlc_category>
 	## cardinality = 0..1
 	subscription_promo = scalar
 	## cardinality = 0..1
