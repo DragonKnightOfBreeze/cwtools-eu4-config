@@ -80,6 +80,7 @@ enums = {
 		"Lions of the North"
 		"Domination"
 		"King of Kings"
+		"Winds of Change"
 	}
 	enum[DLCNUM] = {
 		dlc001
@@ -209,6 +210,11 @@ enums = {
 		dlc130
 		dlc131
 		dlc132
+		dlc136
+		dlc137
+		dlc138
+		dlc139
+		dlc140
 	}
 	enum[key_name] = {
 		key
@@ -428,11 +434,14 @@ enums = {
 		heavy_ship_power
 		infantry_power
 		influence_to_vassal_elevation_cost
+		inti_reforms_passed
 		land_forcelimit_modifier
 		land_morale
+		legitimacy
 		local_build_time
 		local_development_cost
 		local_institution_spread
+		max_absolutism
 		mercenary_discipline
 		missionaries
 		movement_speed
@@ -637,5 +646,20 @@ enums = {
 		 SEEK_SUPPORT_OF_CLERGY_CHURCH
 		 SUPPLY_ARMS_COSSACKS
 		 SUPPORT_TRIBES_NOMADIC_TRIBES
+	}
+	# While the `category =` field of a new diplomatic action
+	# can use any of the keyword values, Let's define it here
+	# and allow it to be used for auto-completion
+	enum[diplomatic_actions_new] = {
+		alliance
+		influence
+		relation
+		dynasty
+		covert
+		economy
+		access
+		emperor
+		papacy
+		great_powers
 	}
 }

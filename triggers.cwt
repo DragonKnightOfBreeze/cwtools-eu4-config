@@ -27,7 +27,7 @@ alias[trigger:<idea_group>] = int[0..8]
 
 ## scope = province
 ###Returns true if the support for the specified institution in the province is at least X.
-alias[trigger:<institution>] = int[0..100]
+alias[trigger:<institution>] = float
 
 ## scope = country
 ###Returns true if the country has a tolerance of at least X of the specified religion. Note: No correct localisation.
@@ -1102,6 +1102,9 @@ alias[trigger:has_active_debate] = bool
 ## scope = country
 ###Returns true if the country has activated a fervor effect.
 alias[trigger:has_active_fervor] = bool
+## scope = country
+###Returns true if the country has activated a fervor effect.
+alias[trigger:has_active_fervor] = <fervor>
 
 ## scope = country
 ###Returns true if country has the specified policy active.
@@ -2890,7 +2893,7 @@ alias[trigger:native_hostileness] = int
 
 ## scope = province
 ###Returns true if size of natives in the province is at least X.
-alias[trigger:native_size] = int
+alias[trigger:native_size] = float
 
 ## scope = country
 ###Returns true if the country has a naval force limit of at least X, or at least as large a naval force limit as the specified country.
@@ -3646,6 +3649,11 @@ alias[trigger:province_distance] = {
 	who = scope[province]
 	distance = int
 }
+alias[trigger:province_distance] = {
+	who = scope[country]
+	distance = int
+}
+
 ## scope = province
 ###Returns true if the province has the ID X or the same ID as the specified province scope.
 alias[trigger:province_id] = <province_id>
@@ -4023,7 +4031,7 @@ alias[trigger:started_in] = date_field
 
 ## scope = country
 ###Returns true if Statists vs Orangists is at least X.
-alias[trigger:statists_vs_orangists] = float[0.0..1.0]
+alias[trigger:statists_vs_orangists] = float
 
 ## scope = country
 ###Returns true if the country receives subsidies of at least X% of its monthly income.
@@ -5828,7 +5836,7 @@ alias[trigger:has_naval_doctrine] = <naval_doctrine>
 alias[trigger:has_naval_doctrine] = any
 
 ## scope = country
-alias[trigger:has_unembraced_institution] = bool
+alias[trigger:has_unembraced_institution] = <institution>
 
 ## scope = country
 ###Returns true if scoped country has ever humiliated the specified country
@@ -5892,3 +5900,6 @@ alias[trigger:num_of_mamluks] = int
 
 # scope = country
 alias[trigger:monthly_trade_income] = int
+
+# scope = country
+alias[trigger:uses_legitimacy] = bool

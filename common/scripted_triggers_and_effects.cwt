@@ -241,6 +241,7 @@ alias[effect:create_units_of_type] = {
 alias[effect:create_units_of_type_in_province] = {
 	amount = int
 	unit_type = <unit_type>
+	unit_type = enum[unit_types]
 	unit_type = enum[special_unit_types]
 	who = enum[country_tags]
 	who = scope[country]
@@ -2138,18 +2139,6 @@ alias[effect:select_biggest_country_of_scope_type] = {
 
 ## scope = country
 ### Force scripted effect to work
-alias[effect:add_accepted_culture_or_dip_power] = {
-	culture = <culture>
-	## cardinality = 0..1
-	dip_reward = yes
-	## cardinality = 0..1
-	free = yes
-	## cardinality = 0..1
-	new_line = yes
-}
-
-## scope = country
-### Force scripted effect to work
 alias[effect:update_entire_culture] = {
 	culture = <culture>
 	## cardinality = 0..1
@@ -2260,3 +2249,52 @@ alias[trigger:european_trade_node_scope] = {
 	## cardinality = 0..inf
 	scalar = scalar
 }
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[effect:distribute_development] = {
+	amount = int
+	type = enum[building_development_type]
+	limit = scalar
+	## cardinality = 0..1
+	tooltip = localisation
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[trigger:every_trunk_road_province_trigger] = {
+	trigger = scalar
+	## cardinality = 0..1
+	tooltip = localisation
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:add_accepted_culture_or_dip_power_stated] = {
+	culture = <culture>
+	dip_reward = bool
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[trigger:INC_every_part_of_route] = {
+	trigger = scalar
+	## cardinality = 0..1
+	tooltip = localisation
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[trigger:INC_has_any_provinces_to_colonize_with_trigger] = {
+	trigger = scalar
+	## cardinality = 0..1
+	tooltip = localisation
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:GER_unlock_reform_based_on_culture] = {
+	## cardinality = 0..1
+	reform = bool
+}
+

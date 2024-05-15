@@ -9,6 +9,8 @@ enums = {
 		adm_advisor_religion
 		adm_tech
 		army_size
+		army_tradition
+		ArmyTradtionOfFROM
 		border_distance
 		consort_adm
 		consort_age
@@ -39,9 +41,12 @@ enums = {
 		mil_tech
 		modifier:accept_vassalization_reasons
 		modifier:diplomatic_reputation
+		modifier:num_of_soyurghals
+		modifier:soyurghals_amount_check_influence
 		monthly_income
 		num_of_loans
 		opinion
+		OpinionOfFROM
 		prestige
 		primary_culture
 		religion
@@ -74,6 +79,9 @@ enums = {
 		trigger_value:legitimacy_equivalent
 		trigger_value:mil_power
 		trigger_value:mercantilism
+		trigger_value:monthly_adm
+		trigger_value:monthly_dip
+		trigger_value:monthly_mil
 		trigger_value:monthly_income
 		trigger_value:nationalism
 		trigger_value:native_size
@@ -81,6 +89,7 @@ enums = {
 		trigger_value:num_of_provinces_in_states
 		trigger_value:production_income_percentage
 		trigger_value:ruler_age
+		trigger_value:tax_income_percentage
 		trigger_value:total_development
 		trigger_value:trade_income_percentage
 		trigger_value:trade_node_value
