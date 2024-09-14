@@ -1468,6 +1468,8 @@ alias[effect:create_subject] = {
 	enum[who_or_subject] = enum[country_tags]
 	## cardinality = 0..1
 	keep_liberty_desire = yes
+	## cardinality = 0..1
+	message = no
 }
 
 ## scope = country
