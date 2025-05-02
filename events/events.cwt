@@ -5,12 +5,14 @@ types = {
 		file_extension = .txt
 		name_field = id
 
+		## group = event_attribute
 		subtype[triggered] = {
 			is_triggered_only = yes
 		}
 		subtype[mean_time_to_happen] = {
 			mean_time_to_happen = {}
 		}
+		## group = event_attribute
 		subtype[hidden] = {
 			hidden = yes
 		}
