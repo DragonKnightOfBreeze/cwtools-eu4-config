@@ -389,6 +389,7 @@ enums = {
 		selectable_trade_goods_for_colonies
 		gain_monarch_power_from_force_converting
 		unlock_persia_holy_orders
+		raze_province
 	}
 	enum[monsoons] = {
 		severe_monsoon
