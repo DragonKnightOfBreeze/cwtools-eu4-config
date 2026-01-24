@@ -362,9 +362,11 @@ alias[trigger:cavalry_in_province] = enum[country_tags]
 ## scope = { province country }
 ###Returns true if the specified variable is at least X.
 alias[trigger:check_variable] = {
-	## cardinality = 0..2
 	## severity = warning
+	## cardinality = 0..2
 	which = value[variable]
+	## cardinality = 0..2
+	which = enum[variable_name]
 	## cardinality = 0..2
 	## severity = warning
 	value[variable]= float
